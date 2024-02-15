@@ -1,0 +1,1437 @@
+2024/01/17-12:10:01:  main 556
+2024/01/17-12:10:02:  Software Version: CHITUBOX V1.9.5
+2024/01/17-12:10:02:  Operation system "arch unknown"
+2024/01/17-12:10:02:  applicationFilePath(): "/opt/chitubox-free/CHITUBOX"
+2024/01/17-12:10:02:  screenRect QRect(1920,2160 1920x1080) available: QRect(1920,2160 1920x1080)
+2024/01/17-12:10:03:  updateLangSel: ("zh_TW", "zh_CN", "en", "ko", "gr", "ru", "tr", "ptbr", "de", "it", "fr", "es", "jp", "cz", "ar", "fi", "hu", "nl", "pl")
+2024/01/17-12:10:03:  =========================== "en" "/opt/chitubox-free/resource/i18n/"
+2024/01/17-12:10:03:  
+ mqtt-server port :  26119
+2024/01/17-12:10:03:  
+ http-server port :  56840
+2024/01/17-12:10:03:  name: () 0
+2024/01/17-12:10:03:  current font: "Microsoft YaHei"
+2024/01/17-12:10:03:  default font: "Linux Biolinum"
+2024/01/17-12:10:03:  =========================== "en" "/opt/chitubox-free/resource/i18n/"
+2024/01/17-12:10:03:  currConfigRoot: "/home/zww/.config/ChiTuBox"
+2024/01/17-12:10:03:  currResouceRoot: "/opt/chitubox-free/resource/"
+2024/01/17-12:10:06:  @@@@ "English" "United States" "Latin" "en" QLocale::UnitedStates 19
+2024/01/17-12:10:06:  updateLangSel: ("zh_TW", "zh_CN", "en", "ko", "gr", "ru", "tr", "ptbr", "de", "it", "fr", "es", "jp", "cz", "ar", "fi", "hu", "nl", "pl")
+2024/01/17-12:10:06:  =========================== "en" "/opt/chitubox-free/resource/i18n/"
+Warning: qrc:/component/ReImage.qml:178:22: QML QQuickText: Binding loop detected for property "width"  qrc:/component/ReImage.qml  178  
+2024/01/17-12:10:06:  ViewArea x = 0  y =71***w = 0
+2024/01/17-12:10:06:  loadFileFromArgument 
+Warning: QFile::remove: Empty or null file name    0  
+2024/01/17-12:10:07:  =======Version: "460" valid: true
+2024/01/17-12:10:07:  ==bSupport_GL_EXT: false
+2024/01/17-12:10:07:             GPU vendor: AMD
+2024/01/17-12:10:07:             GPU version: 4.6 (Compatibility Profile) Mesa 23.3.1-arch1.1
+2024/01/17-12:10:07:             GPU render: AMD Radeon R9 Fury Series (radeonsi, fiji, LLVM 16.0.6, DRM 3.54, 6.6.8-arch1-1)
+2024/01/17-12:10:07:             core: true
+2024/01/17-12:10:07:             validVersion: "46"
+2024/01/17-12:10:07:             hasFrameBufferObjects: true
+Warning: QOpenGLShader::compile(Fragment): 0:4(51): error: no function with name 'texture2D'
+    0  
+Warning: *** Problematic Fragment shader source code ***
+#version 460
+#ifdef GL_KHR_blend_equation_advanced
+#extension GL_ARB_fragment_coord_conventions : enable
+#extension GL_KHR_blend_equation_advanced : enable
+#endif
+#define lowp
+#define mediump
+#define highp
+#line 1
+uniform sampler2D sampler;
+out vec4 fragColor;
+void main() {
+   fragColor = vec4(1.0, 0.0, 0.0, 0.0);fragColor = texture2D(sampler, gl_PointCoord);
+}
+
+***    0  
+2024/01/17-12:10:07:  Error 2 SupportPntRender  "0:4(51): error: no function with name 'texture2D'\n"
+Warning: QOpenGLShaderProgram::uniformLocation(matMvp): shader program is not linked    0  
+Warning: QOpenGLShaderProgram::uniformLocation(sampler): shader program is not linked    0  
+Warning: QOpenGLShaderProgram::uniformLocation(pointSize): shader program is not linked    0  
+2024/01/17-12:11:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-12:11:02:  save to file: "/home/zww/.config/ChiTuBox/machine/0.cfg"
+2024/01/17-12:11:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/0.cfg"
+Warning: Qt Quick Layouts: Polish loop detected. Aborting after two iterations.    0  
+2024/01/17-12:11:23:  add new machine: "ELEGOO MARS 3" "ELEGOO MARS 3"
+2024/01/17-12:11:23:  @@@@ "English" "United States" "Latin" "en" QLocale::UnitedStates 19
+2024/01/17-12:11:23:  updateLangSel: ("zh_TW", "zh_CN", "en", "ko", "gr", "ru", "tr", "ptbr", "de", "it", "fr", "es", "jp", "cz", "ar", "fi", "hu", "nl", "pl")
+2024/01/17-12:11:23:  =========================== "en" "/opt/chitubox-free/resource/i18n/"
+Warning: QFile::remove: Empty or null file name    0  
+Warning: Qt Quick Layouts: Polish loop detected. Aborting after two iterations.    0  
+Warning: Qt Quick Layouts: Polish loop detected. Aborting after two iterations.    0  
+2024/01/17-12:12:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-12:12:02:  save to file: "/home/zww/.config/ChiTuBox/machine/1.cfg"
+2024/01/17-12:12:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/1.cfg"
+2024/01/17-12:12:04:  @@@@ "English" "United States" "Latin" "en" QLocale::UnitedStates 19
+2024/01/17-12:12:04:  updateLangSel: ("zh_TW", "zh_CN", "en", "ko", "gr", "ru", "tr", "ptbr", "de", "it", "fr", "es", "jp", "cz", "ar", "fi", "hu", "nl", "pl")
+2024/01/17-12:12:04:  =========================== "en" "/opt/chitubox-free/resource/i18n/"
+Warning: QFile::remove: Empty or null file name    0  
+2024/01/17-12:13:02:  save to file: "/home/zww/.config/ChiTuBox/machine/1.cfg"
+2024/01/17-12:13:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/1.cfg"
+2024/01/17-12:25:27:  fileBtn
+2024/01/17-12:25:39:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/17-12:25:39:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Meilong 7x7 V2/V2_0_CORE_INSERT_M7V2.stl"
+2024/01/17-12:25:42:  fileBtn
+2024/01/17-12:25:45:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/17-12:25:45:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Meilong 7x7 V2/V3_0_CORNER_INSERT_M7V2.stl"
+Warning: QObject::connect: Cannot queue arguments of type 'op_type_t'
+(Make sure 'op_type_t' is registered using qRegisterMetaType().)    0  
+2024/01/17-12:25:47:  fileBtn
+2024/01/17-12:26:00:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/17-12:26:00:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Gan X V2/V3_0_CORNER_INSERT_GXV2.stl"
+2024/01/17-12:27:27:  bSelectAll
+2024/01/17-12:27:30:  fileBtn
+2024/01/17-12:27:37:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/17-12:27:37:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V1_0_CORE_SHELL_ A_MGC4.stl"
+2024/01/17-12:27:37:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V1_0_CORE_SHELL_ B_MGC4.stl"
+2024/01/17-12:27:37:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V1_0_CORNER_INSERT_MGC4.stl"
+2024/01/17-12:27:41:  bSelectAll
+2024/01/17-12:27:43:  bSelectAll
+2024/01/17-12:27:48:  bSelectAll
+2024/01/17-12:27:49:  bSelectAll
+2024/01/17-12:27:50:  bSelectAll
+2024/01/17-12:27:52:  bSelectAll
+2024/01/17-12:33:45:  bSelectAll
+2024/01/17-12:33:56:  bSelectAll
+2024/01/17-12:33:59:  bSelectAll
+2024/01/17-12:34:02:  bSelectAll
+2024/01/17-12:34:16:  bSelectAll
+2024/01/17-12:36:50:  bSelectAll
+2024/01/17-12:36:52:  bSelectAll
+2024/01/17-12:37:02:  bSelectAll
+2024/01/17-12:37:04:  bSelectAll
+2024/01/17-12:37:05:  bSelectAll
+2024/01/17-12:37:07:  bSelectAll
+2024/01/17-12:37:08:  bSelectAll
+2024/01/17-12:37:09:  bSelectAll
+2024/01/17-12:39:14:  bSelectAll
+2024/01/17-12:40:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-12:40:02:  save to file: "/home/zww/.config/ChiTuBox/machine/1.cfg"
+2024/01/17-12:40:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/1.cfg"
+Warning: QImage::pixelColor: coordinate (813,445) out of range    0  
+Warning: QImage::pixelColor: coordinate (815,442) out of range    0  
+Warning: QImage::pixelColor: coordinate (820,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (827,429) out of range    0  
+Warning: QImage::pixelColor: coordinate (829,428) out of range    0  
+Warning: QImage::pixelColor: coordinate (833,424) out of range    0  
+Warning: QImage::pixelColor: coordinate (836,422) out of range    0  
+Warning: QImage::pixelColor: coordinate (837,421) out of range    0  
+Warning: QImage::pixelColor: coordinate (840,421) out of range    0  
+Warning: QImage::pixelColor: coordinate (841,421) out of range    0  
+Warning: QImage::pixelColor: coordinate (843,421) out of range    0  
+Warning: QImage::pixelColor: coordinate (843,421) out of range    0  
+Warning: QImage::pixelColor: coordinate (843,422) out of range    0  
+Warning: QImage::pixelColor: coordinate (840,426) out of range    0  
+Warning: QImage::pixelColor: coordinate (833,432) out of range    0  
+Warning: QImage::pixelColor: coordinate (832,434) out of range    0  
+Warning: QImage::pixelColor: coordinate (828,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (827,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (827,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (826,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (826,437) out of range    0  
+Warning: QImage::pixelColor: coordinate (826,437) out of range    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (867,438) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,431) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,425) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,417) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,411) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,410) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,407) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,403) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,403) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,401) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,399) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,398) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,395) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,394) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,393) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,393) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,389) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,379) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,374) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,364) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,353) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,344) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,341) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,326) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,324) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,323) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,322) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,322) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,322) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (865,323) out of range    0  
+Warning: QImage::pixelColor: coordinate (860,325) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (932,433) out of range    0  
+Warning: QImage::pixelColor: coordinate (915,407) out of range    0  
+Warning: QImage::pixelColor: coordinate (912,398) out of range    0  
+Warning: QImage::pixelColor: coordinate (910,383) out of range    0  
+Warning: QImage::pixelColor: coordinate (908,377) out of range    0  
+Warning: QImage::pixelColor: coordinate (904,362) out of range    0  
+Warning: QImage::pixelColor: coordinate (902,352) out of range    0  
+Warning: QImage::pixelColor: coordinate (901,348) out of range    0  
+Warning: QImage::pixelColor: coordinate (900,342) out of range    0  
+Warning: QImage::pixelColor: coordinate (900,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (900,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (900,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (900,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (899,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (893,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (890,334) out of range    0  
+Warning: QImage::pixelColor: coordinate (883,334) out of range    0  
+Warning: QImage::pixelColor: coordinate (878,332) out of range    0  
+Warning: QImage::pixelColor: coordinate (875,332) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,330) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,328) out of range    0  
+Warning: QImage::pixelColor: coordinate (871,327) out of range    0  
+Warning: QImage::pixelColor: coordinate (875,325) out of range    0  
+Warning: QImage::pixelColor: coordinate (878,324) out of range    0  
+Warning: QImage::pixelColor: coordinate (882,323) out of range    0  
+Warning: QImage::pixelColor: coordinate (884,322) out of range    0  
+Warning: QImage::pixelColor: coordinate (884,322) out of range    0  
+Warning: QImage::pixelColor: coordinate (884,322) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (785,409) out of range    0  
+Warning: QImage::pixelColor: coordinate (819,405) out of range    0  
+Warning: QImage::pixelColor: coordinate (879,401) out of range    0  
+Warning: QImage::pixelColor: coordinate (945,399) out of range    0  
+Warning: QImage::pixelColor: coordinate (959,367) out of range    0  
+Warning: QImage::pixelColor: coordinate (959,367) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,368) out of range    0  
+Warning: QImage::pixelColor: coordinate (965,376) out of range    0  
+Warning: QImage::pixelColor: coordinate (965,379) out of range    0  
+Warning: QImage::pixelColor: coordinate (965,380) out of range    0  
+Warning: QImage::pixelColor: coordinate (965,381) out of range    0  
+Warning: QImage::pixelColor: coordinate (965,381) out of range    0  
+Warning: QImage::pixelColor: coordinate (963,381) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,383) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,384) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,384) out of range    0  
+Warning: QImage::pixelColor: coordinate (956,384) out of range    0  
+Warning: QImage::pixelColor: coordinate (956,384) out of range    0  
+Warning: QImage::pixelColor: coordinate (956,385) out of range    0  
+Warning: QImage::pixelColor: coordinate (956,387) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,389) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,390) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,390) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,392) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,393) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,393) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,394) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,394) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,396) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,396) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,397) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,397) out of range    0  
+Warning: QImage::pixelColor: coordinate (959,397) out of range    0  
+Warning: QImage::pixelColor: coordinate (959,394) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,392) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,391) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,390) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,390) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,389) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,389) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,389) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (958,411) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (947,412) out of range    0  
+Warning: QImage::pixelColor: coordinate (886,377) out of range    0  
+Warning: QImage::pixelColor: coordinate (862,361) out of range    0  
+Warning: QImage::pixelColor: coordinate (813,323) out of range    0  
+Warning: QImage::pixelColor: coordinate (813,323) out of range    0  
+Warning: QImage::pixelColor: coordinate (810,321) out of range    0  
+Warning: QImage::pixelColor: coordinate (810,321) out of range    0  
+Warning: QImage::pixelColor: coordinate (811,321) out of range    0  
+Warning: QImage::pixelColor: coordinate (819,324) out of range    0  
+Warning: QImage::pixelColor: coordinate (828,326) out of range    0  
+Warning: QImage::pixelColor: coordinate (833,327) out of range    0  
+Warning: QImage::pixelColor: coordinate (843,329) out of range    0  
+Warning: QImage::pixelColor: coordinate (850,333) out of range    0  
+Warning: QImage::pixelColor: coordinate (853,334) out of range    0  
+Warning: QImage::pixelColor: coordinate (857,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (860,336) out of range    0  
+Warning: QImage::pixelColor: coordinate (861,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (862,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (864,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (865,339) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (870,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (870,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,336) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,336) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,333) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,333) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,332) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,332) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (867,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (868,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,331) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,332) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,333) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,334) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,335) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (870,335) out of range    0  
+Warning: QImage::pixelColor: coordinate (873,336) out of range    0  
+Warning: QImage::pixelColor: coordinate (874,336) out of range    0  
+Warning: QImage::pixelColor: coordinate (875,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (876,339) out of range    0  
+Warning: QImage::pixelColor: coordinate (877,339) out of range    0  
+Warning: QImage::pixelColor: coordinate (877,339) out of range    0  
+Warning: QImage::pixelColor: coordinate (877,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (877,340) out of range    0  
+Warning: QImage::pixelColor: coordinate (876,339) out of range    0  
+Warning: QImage::pixelColor: coordinate (872,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (871,338) out of range    0  
+Warning: QImage::pixelColor: coordinate (871,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (871,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (870,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (870,337) out of range    0  
+Warning: QImage::pixelColor: coordinate (887,345) out of range    0  
+Warning: QImage::pixelColor: coordinate (976,745) out of range    0  
+Warning: QImage::pixelColor: coordinate (985,742) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,734) out of range    0  
+Warning: QImage::pixelColor: coordinate (1005,731) out of range    0  
+Warning: QImage::pixelColor: coordinate (872,534) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,522) out of range    0  
+Warning: QImage::pixelColor: coordinate (869,522) out of range    0  
+Warning: QImage::pixelColor: coordinate (872,523) out of range    0  
+Warning: QImage::pixelColor: coordinate (881,528) out of range    0  
+Warning: QImage::pixelColor: coordinate (887,532) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,533) out of range    0  
+Warning: QImage::pixelColor: coordinate (892,535) out of range    0  
+Warning: QImage::pixelColor: coordinate (893,536) out of range    0  
+Warning: QImage::pixelColor: coordinate (894,538) out of range    0  
+Warning: QImage::pixelColor: coordinate (896,538) out of range    0  
+Warning: QImage::pixelColor: coordinate (897,538) out of range    0  
+Warning: QImage::pixelColor: coordinate (897,538) out of range    0  
+Warning: QImage::pixelColor: coordinate (899,539) out of range    0  
+Warning: QImage::pixelColor: coordinate (899,539) out of range    0  
+Warning: QImage::pixelColor: coordinate (903,541) out of range    0  
+Warning: QImage::pixelColor: coordinate (904,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (904,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (905,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (905,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (906,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (906,542) out of range    0  
+Warning: QImage::pixelColor: coordinate (908,540) out of range    0  
+Warning: QImage::pixelColor: coordinate (914,536) out of range    0  
+Warning: QImage::pixelColor: coordinate (917,533) out of range    0  
+Warning: QImage::pixelColor: coordinate (924,529) out of range    0  
+Warning: QImage::pixelColor: coordinate (940,517) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,503) out of range    0  
+Warning: QImage::pixelColor: coordinate (962,497) out of range    0  
+Warning: QImage::pixelColor: coordinate (969,486) out of range    0  
+Warning: QImage::pixelColor: coordinate (975,474) out of range    0  
+Warning: QImage::pixelColor: coordinate (977,470) out of range    0  
+Warning: QImage::pixelColor: coordinate (981,461) out of range    0  
+Warning: QImage::pixelColor: coordinate (982,457) out of range    0  
+Warning: QImage::pixelColor: coordinate (985,452) out of range    0  
+Warning: QImage::pixelColor: coordinate (985,449) out of range    0  
+Warning: QImage::pixelColor: coordinate (985,449) out of range    0  
+Warning: QImage::pixelColor: coordinate (985,449) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (963,387) out of range    0  
+Warning: QImage::pixelColor: coordinate (962,364) out of range    0  
+Warning: QImage::pixelColor: coordinate (960,353) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (959,327) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (960,328) out of range    0  
+Warning: QImage::pixelColor: coordinate (962,348) out of range    0  
+Warning: QImage::pixelColor: coordinate (962,359) out of range    0  
+Warning: QImage::pixelColor: coordinate (967,385) out of range    0  
+Warning: QImage::pixelColor: coordinate (970,410) out of range    0  
+Warning: QImage::pixelColor: coordinate (972,422) out of range    0  
+Warning: QImage::pixelColor: coordinate (975,441) out of range    0  
+Warning: QImage::pixelColor: coordinate (975,456) out of range    0  
+Warning: QImage::pixelColor: coordinate (975,464) out of range    0  
+Warning: QImage::pixelColor: coordinate (973,481) out of range    0  
+Warning: QImage::pixelColor: coordinate (963,508) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,527) out of range    0  
+Warning: QImage::pixelColor: coordinate (951,547) out of range    0  
+Warning: QImage::pixelColor: coordinate (1066,692) out of range    0  
+Warning: QImage::pixelColor: coordinate (1089,692) out of range    0  
+Warning: QImage::pixelColor: coordinate (1089,692) out of range    0  
+Warning: QImage::pixelColor: coordinate (1107,694) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,695) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,695) out of range    0  
+Warning: QImage::pixelColor: coordinate (1122,698) out of range    0  
+Warning: QImage::pixelColor: coordinate (1124,699) out of range    0  
+Warning: QImage::pixelColor: coordinate (1125,699) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,701) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,702) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,702) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,702) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,702) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,703) out of range    0  
+Warning: QImage::pixelColor: coordinate (1128,711) out of range    0  
+Warning: QImage::pixelColor: coordinate (1129,713) out of range    0  
+Warning: QImage::pixelColor: coordinate (1130,716) out of range    0  
+Warning: QImage::pixelColor: coordinate (1129,722) out of range    0  
+Warning: QImage::pixelColor: coordinate (1129,727) out of range    0  
+Warning: QImage::pixelColor: coordinate (1127,734) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,735) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (1126,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (1124,735) out of range    0  
+Warning: QImage::pixelColor: coordinate (1124,735) out of range    0  
+Warning: QImage::pixelColor: coordinate (1124,735) out of range    0  
+Warning: QImage::pixelColor: coordinate (1123,734) out of range    0  
+Warning: QImage::pixelColor: coordinate (1123,734) out of range    0  
+Warning: QImage::pixelColor: coordinate (1122,734) out of range    0  
+Warning: QImage::pixelColor: coordinate (1120,733) out of range    0  
+Warning: QImage::pixelColor: coordinate (1119,732) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,732) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,732) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,731) out of range    0  
+Warning: QImage::pixelColor: coordinate (1116,728) out of range    0  
+Warning: QImage::pixelColor: coordinate (1115,727) out of range    0  
+Warning: QImage::pixelColor: coordinate (1114,724) out of range    0  
+Warning: QImage::pixelColor: coordinate (1113,720) out of range    0  
+Warning: QImage::pixelColor: coordinate (1113,717) out of range    0  
+Warning: QImage::pixelColor: coordinate (1113,709) out of range    0  
+Warning: QImage::pixelColor: coordinate (1114,700) out of range    0  
+Warning: QImage::pixelColor: coordinate (1115,695) out of range    0  
+Warning: QImage::pixelColor: coordinate (1117,689) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,685) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,684) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,683) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,683) out of range    0  
+Warning: QImage::pixelColor: coordinate (1118,683) out of range    0  
+Warning: QImage::pixelColor: coordinate (1120,683) out of range    0  
+Warning: QImage::pixelColor: coordinate (1127,686) out of range    0  
+Warning: QImage::pixelColor: coordinate (1129,686) out of range    0  
+Warning: QImage::pixelColor: coordinate (1133,686) out of range    0  
+Warning: QImage::pixelColor: coordinate (1134,687) out of range    0  
+Warning: QImage::pixelColor: coordinate (1135,687) out of range    0  
+Warning: QImage::pixelColor: coordinate (1135,687) out of range    0  
+Warning: QImage::pixelColor: coordinate (1137,687) out of range    0  
+Warning: QImage::pixelColor: coordinate (1140,688) out of range    0  
+Warning: QImage::pixelColor: coordinate (1141,689) out of range    0  
+Warning: QImage::pixelColor: coordinate (1141,689) out of range    0  
+Warning: QImage::pixelColor: coordinate (1141,689) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1152,622) out of range    0  
+Warning: QImage::pixelColor: coordinate (1202,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1260,744) out of range    0  
+Warning: QImage::pixelColor: coordinate (1259,745) out of range    0  
+Warning: QImage::pixelColor: coordinate (1259,746) out of range    0  
+Warning: QImage::pixelColor: coordinate (1259,746) out of range    0  
+Warning: QImage::pixelColor: coordinate (1259,747) out of range    0  
+Warning: QImage::pixelColor: coordinate (1264,750) out of range    0  
+Warning: QImage::pixelColor: coordinate (1267,752) out of range    0  
+Warning: QImage::pixelColor: coordinate (1276,755) out of range    0  
+Warning: QImage::pixelColor: coordinate (1290,764) out of range    0  
+Warning: QImage::pixelColor: coordinate (1297,768) out of range    0  
+Warning: QImage::pixelColor: coordinate (1309,776) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1320,784) out of range    0  
+Warning: QImage::pixelColor: coordinate (1322,786) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,786) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,786) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,785) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,784) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,781) out of range    0  
+Warning: QImage::pixelColor: coordinate (1320,778) out of range    0  
+Warning: QImage::pixelColor: coordinate (1319,778) out of range    0  
+Warning: QImage::pixelColor: coordinate (1319,778) out of range    0  
+Warning: QImage::pixelColor: coordinate (1319,777) out of range    0  
+Warning: QImage::pixelColor: coordinate (1319,777) out of range    0  
+Warning: QImage::pixelColor: coordinate (1319,778) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,784) out of range    0  
+Warning: QImage::pixelColor: coordinate (1314,787) out of range    0  
+Warning: QImage::pixelColor: coordinate (1311,790) out of range    0  
+Warning: QImage::pixelColor: coordinate (1310,791) out of range    0  
+Warning: QImage::pixelColor: coordinate (1310,791) out of range    0  
+Warning: QImage::pixelColor: coordinate (1310,790) out of range    0  
+Warning: QImage::pixelColor: coordinate (1305,785) out of range    0  
+Warning: QImage::pixelColor: coordinate (1304,781) out of range    0  
+Warning: QImage::pixelColor: coordinate (1300,771) out of range    0  
+Warning: QImage::pixelColor: coordinate (1299,765) out of range    0  
+Warning: QImage::pixelColor: coordinate (1299,765) out of range    0  
+Warning: QImage::pixelColor: coordinate (1299,764) out of range    0  
+Warning: QImage::pixelColor: coordinate (1299,764) out of range    0  
+Warning: QImage::pixelColor: coordinate (1301,766) out of range    0  
+Warning: QImage::pixelColor: coordinate (1305,767) out of range    0  
+Warning: QImage::pixelColor: coordinate (1308,768) out of range    0  
+Warning: QImage::pixelColor: coordinate (1310,769) out of range    0  
+Warning: QImage::pixelColor: coordinate (1312,771) out of range    0  
+Warning: QImage::pixelColor: coordinate (1313,771) out of range    0  
+Warning: QImage::pixelColor: coordinate (1314,772) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,773) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,773) out of range    0  
+Warning: QImage::pixelColor: coordinate (1316,773) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,774) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,774) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,775) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,777) out of range    0  
+Warning: QImage::pixelColor: coordinate (1317,778) out of range    0  
+Warning: QImage::pixelColor: coordinate (1316,779) out of range    0  
+Warning: QImage::pixelColor: coordinate (1316,780) out of range    0  
+Warning: QImage::pixelColor: coordinate (1316,780) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,780) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,781) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1315,783) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1313,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1309,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1302,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1290,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1282,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1259,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1250,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1223,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1206,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1202,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1199,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1199,783) out of range    0  
+Warning: QImage::pixelColor: coordinate (1199,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1199,782) out of range    0  
+Warning: QImage::pixelColor: coordinate (1202,781) out of range    0  
+Warning: QImage::pixelColor: coordinate (1228,777) out of range    0  
+Warning: QImage::pixelColor: coordinate (1282,771) out of range    0  
+Warning: QImage::pixelColor: coordinate (1318,769) out of range    0  
+2024/01/17-13:43:02:  save to file: "/home/zww/.config/ChiTuBox/machine/1.cfg"
+2024/01/17-13:43:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/1.cfg"
+Warning: QImage::pixelColor: coordinate (1203,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (1101,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1061,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1007,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (977,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (970,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (968,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (968,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (969,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (971,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (974,650) out of range    0  
+Warning: QImage::pixelColor: coordinate (981,654) out of range    0  
+Warning: QImage::pixelColor: coordinate (991,659) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,665) out of range    0  
+Warning: QImage::pixelColor: coordinate (1007,668) out of range    0  
+Warning: QImage::pixelColor: coordinate (1018,670) out of range    0  
+Warning: QImage::pixelColor: coordinate (1025,672) out of range    0  
+Warning: QImage::pixelColor: coordinate (1027,672) out of range    0  
+Warning: QImage::pixelColor: coordinate (1028,672) out of range    0  
+Warning: QImage::pixelColor: coordinate (1029,672) out of range    0  
+Warning: QImage::pixelColor: coordinate (1029,672) out of range    0  
+Warning: QImage::pixelColor: coordinate (1029,673) out of range    0  
+Warning: QImage::pixelColor: coordinate (1030,673) out of range    0  
+Warning: QImage::pixelColor: coordinate (1030,673) out of range    0  
+Warning: QImage::pixelColor: coordinate (1030,673) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1013,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1013,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1005,651) out of range    0  
+Warning: QImage::pixelColor: coordinate (983,670) out of range    0  
+Warning: QImage::pixelColor: coordinate (955,692) out of range    0  
+Warning: QImage::pixelColor: coordinate (929,712) out of range    0  
+Warning: QImage::pixelColor: coordinate (910,724) out of range    0  
+Warning: QImage::pixelColor: coordinate (906,726) out of range    0  
+Warning: QImage::pixelColor: coordinate (901,728) out of range    0  
+Warning: QImage::pixelColor: coordinate (899,729) out of range    0  
+Warning: QImage::pixelColor: coordinate (896,731) out of range    0  
+Warning: QImage::pixelColor: coordinate (893,733) out of range    0  
+Warning: QImage::pixelColor: coordinate (893,735) out of range    0  
+Warning: QImage::pixelColor: coordinate (890,736) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (889,737) out of range    0  
+Warning: QImage::pixelColor: coordinate (386,518) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,507) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,499) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,492) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,488) out of range    0  
+Warning: QImage::pixelColor: coordinate (387,478) out of range    0  
+Warning: QImage::pixelColor: coordinate (390,464) out of range    0  
+Warning: QImage::pixelColor: coordinate (394,456) out of range    0  
+Warning: QImage::pixelColor: coordinate (396,454) out of range    0  
+Warning: QImage::pixelColor: coordinate (399,451) out of range    0  
+Warning: QImage::pixelColor: coordinate (399,450) out of range    0  
+Warning: QImage::pixelColor: coordinate (401,448) out of range    0  
+Warning: QImage::pixelColor: coordinate (404,446) out of range    0  
+Warning: QImage::pixelColor: coordinate (405,445) out of range    0  
+Warning: QImage::pixelColor: coordinate (407,443) out of range    0  
+Warning: QImage::pixelColor: coordinate (409,440) out of range    0  
+Warning: QImage::pixelColor: coordinate (411,438) out of range    0  
+Warning: QImage::pixelColor: coordinate (417,432) out of range    0  
+Warning: QImage::pixelColor: coordinate (421,429) out of range    0  
+Warning: QImage::pixelColor: coordinate (422,429) out of range    0  
+Warning: QImage::pixelColor: coordinate (422,429) out of range    0  
+Warning: QImage::pixelColor: coordinate (422,429) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (421,359) out of range    0  
+Warning: QImage::pixelColor: coordinate (406,386) out of range    0  
+Warning: QImage::pixelColor: coordinate (398,408) out of range    0  
+Warning: QImage::pixelColor: coordinate (388,450) out of range    0  
+Warning: QImage::pixelColor: coordinate (382,492) out of range    0  
+Warning: QImage::pixelColor: coordinate (382,507) out of range    0  
+Warning: QImage::pixelColor: coordinate (884,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (874,491) out of range    0  
+Warning: QImage::pixelColor: coordinate (866,488) out of range    0  
+Warning: QImage::pixelColor: coordinate (863,487) out of range    0  
+Warning: QImage::pixelColor: coordinate (857,484) out of range    0  
+Warning: QImage::pixelColor: coordinate (851,482) out of range    0  
+Warning: QImage::pixelColor: coordinate (850,481) out of range    0  
+Warning: QImage::pixelColor: coordinate (850,481) out of range    0  
+Warning: QImage::pixelColor: coordinate (850,481) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (859,504) out of range    0  
+Warning: QImage::pixelColor: coordinate (826,515) out of range    0  
+Warning: QImage::pixelColor: coordinate (806,523) out of range    0  
+Warning: QImage::pixelColor: coordinate (754,537) out of range    0  
+Warning: QImage::pixelColor: coordinate (639,569) out of range    0  
+Warning: QImage::pixelColor: coordinate (621,567) out of range    0  
+Warning: QImage::pixelColor: coordinate (625,565) out of range    0  
+Warning: QImage::pixelColor: coordinate (628,563) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,562) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,562) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,561) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,561) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,561) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (627,556) out of range    0  
+Warning: QImage::pixelColor: coordinate (625,555) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (623,545) out of range    0  
+Warning: QImage::pixelColor: coordinate (630,547) out of range    0  
+Warning: QImage::pixelColor: coordinate (639,550) out of range    0  
+Warning: QImage::pixelColor: coordinate (644,551) out of range    0  
+Warning: QImage::pixelColor: coordinate (645,552) out of range    0  
+Warning: QImage::pixelColor: coordinate (645,552) out of range    0  
+Warning: QImage::pixelColor: coordinate (646,552) out of range    0  
+Warning: QImage::pixelColor: coordinate (646,553) out of range    0  
+Warning: QImage::pixelColor: coordinate (646,553) out of range    0  
+Warning: QImage::pixelColor: coordinate (646,553) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (571,501) out of range    0  
+Warning: QImage::pixelColor: coordinate (607,495) out of range    0  
+Warning: QImage::pixelColor: coordinate (671,491) out of range    0  
+Warning: QImage::pixelColor: coordinate (705,489) out of range    0  
+Warning: QImage::pixelColor: coordinate (793,487) out of range    0  
+Warning: QImage::pixelColor: coordinate (847,487) out of range    0  
+2024/01/17-13:46:41:  bSelectAll
+2024/01/17-13:46:43:  bSelectAll
+2024/01/17-13:46:46:  bSelectAll
+2024/01/17-13:46:49:  bSelectAll
+2024/01/17-13:46:51:  bSelectAll
+2024/01/17-13:46:56:  bSelectAll
+2024/01/17-13:46:58:  bSelectAll
+2024/01/17-13:46:59:  bSelectAll
+2024/01/17-13:47:00:  bSelectAll
+2024/01/17-13:47:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-13:47:03:  bSelectAll
+2024/01/17-13:47:05:  bSelectAll
+2024/01/17-13:47:06:  bSelectAll
+2024/01/17-13:47:09:  bSelectAll
+2024/01/17-13:47:13:  bSelectAll
+2024/01/17-13:47:16:  bSelectAll
+2024/01/17-13:47:17:  bSelectAll
+2024/01/17-13:47:22:  bSelectAll
+2024/01/17-13:47:23:  bSelectAll
+2024/01/17-13:47:25:  bSelectAll
+2024/01/17-13:47:27:  bSelectAll
+2024/01/17-13:47:30:  bSelectAll
+2024/01/17-13:47:34:  bSelectAll
+2024/01/17-13:47:35:  bSelectAll
+2024/01/17-13:47:40:  bSelectAll
+2024/01/17-13:47:41:  bSelectAll
+2024/01/17-13:47:43:  bSelectAll
+2024/01/17-13:47:44:  bSelectAll
+2024/01/17-13:47:46:  bSelectAll
+2024/01/17-13:47:48:  bSelectAll
+2024/01/17-13:47:52:  bSelectAll
+2024/01/17-13:47:53:  bSelectAll
+2024/01/17-14:05:39:  bSelectAll
+2024/01/17-14:05:42:  bSelectAll
+2024/01/17-14:05:43:  bSelectAll
+2024/01/17-14:05:46:  bSelectAll
+2024/01/17-14:05:48:  bSelectAll
+2024/01/17-14:05:49:  bSelectAll
+2024/01/17-14:05:51:  bSelectAll
+2024/01/17-14:05:53:  bSelectAll
+2024/01/17-14:05:55:  bSelectAll
+2024/01/17-14:05:57:  bSelectAll
+2024/01/17-14:06:00:  bSelectAll
+2024/01/17-14:06:03:  bSelectAll
+2024/01/17-14:06:08:  bSelectAll
+2024/01/17-14:06:11:  bSelectAll
+2024/01/17-14:06:13:  bSelectAll
+2024/01/17-14:06:15:  bSelectAll
+2024/01/17-14:06:17:  bSelectAll
+2024/01/17-14:06:19:  bSelectAll
+2024/01/17-14:06:22:  bSelectAll
+2024/01/17-14:06:24:  bSelectAll
+2024/01/17-14:06:26:  bSelectAll
+2024/01/17-14:06:30:  bSelectAll
+2024/01/17-14:06:36:  bSelectAll
+2024/01/17-14:06:39:  bSelectAll
+2024/01/17-14:06:43:  bSelectAll
+2024/01/17-14:06:45:  bSelectAll
+2024/01/17-14:06:49:  bSelectAll
+2024/01/17-14:06:52:  bSelectAll
+2024/01/17-14:06:54:  bSelectAll
+2024/01/17-14:06:57:  bSelectAll
+2024/01/17-14:07:02:  bSelectAll
+2024/01/17-14:07:04:  bSelectAll
+2024/01/17-14:07:06:  bSelectAll
+2024/01/17-14:07:11:  bSelectAll
+2024/01/17-14:07:12:  bSelectAll
+2024/01/17-14:07:15:  bSelectAll
+2024/01/17-14:07:16:  bSelectAll
+2024/01/17-14:07:18:  bSelectAll
+2024/01/17-14:07:20:  bSelectAll
+2024/01/17-14:07:21:  bSelectAll
+2024/01/17-14:07:23:  bSelectAll
+2024/01/17-14:07:25:  bSelectAll
+2024/01/17-14:07:26:  bSelectAll
+2024/01/17-14:07:30:  bSelectAll
+2024/01/17-14:07:32:  bSelectAll
+2024/01/17-14:07:33:  bSelectAll
+2024/01/17-14:07:35:  bSelectAll
+2024/01/17-14:07:36:  bSelectAll
+2024/01/17-14:07:39:  bSelectAll
+2024/01/17-14:07:42:  bSelectAll
+2024/01/17-14:07:44:  bSelectAll
+2024/01/17-14:07:46:  bSelectAll
+2024/01/17-14:07:48:  bSelectAll
+2024/01/17-14:07:50:  bSelectAll
+2024/01/17-14:07:52:  bSelectAll
+2024/01/17-14:07:54:  bSelectAll
+2024/01/17-14:07:56:  bSelectAll
+2024/01/17-14:07:57:  bSelectAll
+2024/01/17-14:07:58:  bSelectAll
+2024/01/17-14:08:00:  bSelectAll
+2024/01/17-14:08:02:  bSelectAll
+2024/01/17-14:08:03:  bSelectAll
+2024/01/17-14:08:05:  bSelectAll
+2024/01/17-14:08:06:  bSelectAll
+2024/01/17-14:08:08:  bSelectAll
+2024/01/17-14:08:09:  bSelectAll
+2024/01/17-14:08:13:  bSelectAll
+2024/01/17-14:09:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+Warning: Qt Quick Layouts: Polish loop detected. Aborting after two iterations.    0  
+2024/01/17-14:10:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:10:02:  save to file: "/home/zww/.config/ChiTuBox/machine/1.cfg"
+2024/01/17-14:10:02:  save to file: "/home/zww/.config/ChiTuBox/machineBackup/1.cfg"
+2024/01/17-14:10:07:  suffix: "CHITUBOX slicer(*.ctb)" ""
+2024/01/17-14:10:07:  defaultSuffix: "ctb"
+2024/01/17-14:10:07:  suffix: "CHITUBOX slicer(*.ctb)" ""
+2024/01/17-14:10:07:  defaultSuffix: "ctb"
+2024/01/17-14:10:29:  save File name  "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC4GanxV2Meilong.ctb"
+2024/01/17-14:10:30:  ==slicer version "V1.9.5.0"
+2024/01/17-14:10:34:  save head offset  53861
+2024/01/17-14:11:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+Warning: QFile::remove: Empty or null file name    0  
+2024/01/17-14:21:45:  save File name  ""
+2024/01/17-14:21:59:  fileBtn
+2024/01/17-14:22:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:22:06:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/17-14:22:06:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Aoshi WRM/V_1_0_AOSHI_WRM_CORE_SHELL_A.stl"
+2024/01/17-14:22:06:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Aoshi WRM/V_1_0_AOSHI_WRM_CORE_SHELL_B.stl"
+2024/01/17-14:22:06:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Aoshi WRM/V_1_0_AOSHI_WRM_CORNER_INSERT.stl"
+2024/01/17-14:24:46:  bSelectAll
+2024/01/17-14:24:53:  bSelectAll
+2024/01/17-14:25:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:25:04:  bSelectAll
+Warning: QImage::pixelColor: coordinate (1396,520) out of range    0  
+Warning: QImage::pixelColor: coordinate (1156,480) out of range    0  
+Warning: QImage::pixelColor: coordinate (1146,482) out of range    0  
+Warning: QImage::pixelColor: coordinate (1140,486) out of range    0  
+Warning: QImage::pixelColor: coordinate (1138,487) out of range    0  
+Warning: QImage::pixelColor: coordinate (1134,489) out of range    0  
+Warning: QImage::pixelColor: coordinate (1130,491) out of range    0  
+Warning: QImage::pixelColor: coordinate (1127,491) out of range    0  
+Warning: QImage::pixelColor: coordinate (1123,494) out of range    0  
+Warning: QImage::pixelColor: coordinate (1120,495) out of range    0  
+Warning: QImage::pixelColor: coordinate (1117,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1115,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1115,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1114,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1110,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1107,499) out of range    0  
+Warning: QImage::pixelColor: coordinate (1099,500) out of range    0  
+Warning: QImage::pixelColor: coordinate (1094,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1092,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1089,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1089,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1088,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1088,502) out of range    0  
+Warning: QImage::pixelColor: coordinate (1088,502) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1089,501) out of range    0  
+Warning: QImage::pixelColor: coordinate (1091,497) out of range    0  
+Warning: QImage::pixelColor: coordinate (1093,497) out of range    0  
+Warning: QImage::pixelColor: coordinate (1095,493) out of range    0  
+Warning: QImage::pixelColor: coordinate (1097,491) out of range    0  
+Warning: QImage::pixelColor: coordinate (1098,490) out of range    0  
+Warning: QImage::pixelColor: coordinate (1098,489) out of range    0  
+Warning: QImage::pixelColor: coordinate (1099,489) out of range    0  
+Warning: QImage::pixelColor: coordinate (1100,489) out of range    0  
+Warning: QImage::pixelColor: coordinate (1101,488) out of range    0  
+Warning: QImage::pixelColor: coordinate (1101,487) out of range    0  
+Warning: QImage::pixelColor: coordinate (1104,485) out of range    0  
+Warning: QImage::pixelColor: coordinate (1105,484) out of range    0  
+Warning: QImage::pixelColor: coordinate (1106,483) out of range    0  
+Warning: QImage::pixelColor: coordinate (1106,482) out of range    0  
+Warning: QImage::pixelColor: coordinate (1106,482) out of range    0  
+Warning: QImage::pixelColor: coordinate (1107,482) out of range    0  
+Warning: QImage::pixelColor: coordinate (1107,480) out of range    0  
+Warning: QImage::pixelColor: coordinate (1107,479) out of range    0  
+Warning: QImage::pixelColor: coordinate (1109,478) out of range    0  
+Warning: QImage::pixelColor: coordinate (1111,476) out of range    0  
+Warning: QImage::pixelColor: coordinate (1111,475) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,474) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,474) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,473) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,472) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,472) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,471) out of range    0  
+Warning: QImage::pixelColor: coordinate (1112,471) out of range    0  
+Warning: QImage::pixelColor: coordinate (1113,471) out of range    0  
+Warning: QImage::pixelColor: coordinate (1125,469) out of range    0  
+Warning: QImage::pixelColor: coordinate (1135,468) out of range    0  
+Warning: QImage::pixelColor: coordinate (1373,490) out of range    0  
+Warning: QImage::pixelColor: coordinate (1417,496) out of range    0  
+Warning: QImage::pixelColor: coordinate (1437,498) out of range    0  
+Warning: QImage::pixelColor: coordinate (1474,508) out of range    0  
+Warning: QImage::pixelColor: coordinate (1492,510) out of range    0  
+Warning: QImage::pixelColor: coordinate (1512,516) out of range    0  
+Warning: QImage::pixelColor: coordinate (1512,516) out of range    0  
+2024/01/17-14:25:57:  bSelectAll
+2024/01/17-14:25:58:  bSelectAll
+2024/01/17-14:25:58:  bSelectAll
+2024/01/17-14:26:01:  bSelectAll
+2024/01/17-14:26:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:26:04:  bSelectAll
+2024/01/17-14:26:06:  bSelectAll
+2024/01/17-14:26:10:  bSelectAll
+2024/01/17-14:26:11:  bSelectAll
+2024/01/17-14:26:13:  bSelectAll
+2024/01/17-14:26:15:  bSelectAll
+2024/01/17-14:26:17:  bSelectAll
+2024/01/17-14:26:18:  bSelectAll
+2024/01/17-14:26:19:  bSelectAll
+2024/01/17-14:26:20:  bSelectAll
+2024/01/17-14:26:22:  bSelectAll
+2024/01/17-14:26:24:  bSelectAll
+2024/01/17-14:26:26:  bSelectAll
+2024/01/17-14:26:29:  bSelectAll
+2024/01/17-14:26:31:  bSelectAll
+2024/01/17-14:26:33:  bSelectAll
+2024/01/17-14:26:36:  bSelectAll
+2024/01/17-14:27:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:28:02:  bSelectAll
+2024/01/17-14:28:04:  bSelectAll
+2024/01/17-14:28:05:  bSelectAll
+2024/01/17-14:28:07:  bSelectAll
+2024/01/17-14:28:08:  bSelectAll
+2024/01/17-14:28:09:  bSelectAll
+2024/01/17-14:28:11:  bSelectAll
+2024/01/17-14:28:13:  bSelectAll
+2024/01/17-14:28:14:  bSelectAll
+2024/01/17-14:28:15:  bSelectAll
+2024/01/17-14:28:16:  bSelectAll
+2024/01/17-14:28:18:  bSelectAll
+2024/01/17-14:28:20:  bSelectAll
+2024/01/17-14:28:21:  bSelectAll
+2024/01/17-14:28:22:  bSelectAll
+2024/01/17-14:28:24:  bSelectAll
+2024/01/17-14:28:25:  bSelectAll
+2024/01/17-14:28:27:  bSelectAll
+2024/01/17-14:28:30:  bSelectAll
+2024/01/17-14:28:32:  bSelectAll
+2024/01/17-14:28:34:  bSelectAll
+2024/01/17-14:28:36:  bSelectAll
+2024/01/17-14:28:42:  bSelectAll
+2024/01/17-14:28:43:  bSelectAll
+2024/01/17-14:28:45:  bSelectAll
+2024/01/17-14:28:46:  bSelectAll
+2024/01/17-14:28:47:  bSelectAll
+2024/01/17-14:28:49:  bSelectAll
+2024/01/17-14:28:50:  bSelectAll
+2024/01/17-14:28:51:  bSelectAll
+2024/01/17-14:28:52:  bSelectAll
+2024/01/17-14:28:54:  bSelectAll
+2024/01/17-14:28:57:  bSelectAll
+2024/01/17-14:28:59:  bSelectAll
+2024/01/17-14:29:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:29:03:  bSelectAll
+2024/01/17-14:29:05:  bSelectAll
+2024/01/17-14:29:07:  bSelectAll
+2024/01/17-14:29:35:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/17-14:29:35:  defaultSuffix: "ctb"
+2024/01/17-14:29:35:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/17-14:29:35:  defaultSuffix: "ctb"
+2024/01/17-14:30:00:  save File name  "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Aoshi WRM/AOSHI_V1_0_MASS_PRODUCTION.ctb"
+2024/01/17-14:30:00:  ==slicer version "V1.9.5.0"
+2024/01/17-14:30:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/17-14:30:07:  save head offset  60679
+2024/01/17-19:53:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+Warning: QFile::remove: Empty or null file name    0  
+2024/01/17-21:45:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/18-12:10:22:  fileBtn
+2024/01/18-12:10:36:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/18-12:10:36:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Gan X V2/V4_0_CORNER_INSERT_GXV2.stl"
+2024/01/18-12:10:36:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Gan X V2/V2_0_CORE_INSERT_GXV2.stl"
+2024/01/18-12:10:43:  fileBtn
+2024/01/18-12:11:07:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/18-12:11:07:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Meilong 7x7 V2/V4_0_CORNER_INSERT_M7V2.stl"
+2024/01/18-12:11:10:  fileBtn
+2024/01/18-12:11:16:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/18-12:11:16:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V2_0_CORNER_INSERT_MGC4.stl"
+2024/01/18-12:11:29:  bSelectAll
+2024/01/18-12:11:40:  bSelectAll
+2024/01/18-12:11:57:  bSelectAll
+2024/01/18-12:11:59:  bSelectAll
+2024/01/18-12:12:11:  bSelectAll
+2024/01/18-12:12:30:  bSelectAll
+2024/01/18-12:12:32:  bSelectAll
+2024/01/18-12:12:33:  bSelectAll
+2024/01/18-12:12:35:  bSelectAll
+2024/01/18-12:12:38:  bSelectAll
+2024/01/18-12:12:52:  bSelectAll
+2024/01/18-12:12:55:  bSelectAll
+2024/01/18-12:13:04:  bSelectAll
+Warning: QImage::pixelColor: coordinate (559,717) out of range    0  
+Warning: QImage::pixelColor: coordinate (557,716) out of range    0  
+Warning: QImage::pixelColor: coordinate (551,713) out of range    0  
+Warning: QImage::pixelColor: coordinate (548,710) out of range    0  
+Warning: QImage::pixelColor: coordinate (540,703) out of range    0  
+Warning: QImage::pixelColor: coordinate (534,693) out of range    0  
+Warning: QImage::pixelColor: coordinate (533,687) out of range    0  
+Warning: QImage::pixelColor: coordinate (529,676) out of range    0  
+Warning: QImage::pixelColor: coordinate (528,665) out of range    0  
+Warning: QImage::pixelColor: coordinate (526,661) out of range    0  
+Warning: QImage::pixelColor: coordinate (524,656) out of range    0  
+Warning: QImage::pixelColor: coordinate (523,653) out of range    0  
+Warning: QImage::pixelColor: coordinate (523,653) out of range    0  
+Warning: QImage::pixelColor: coordinate (524,653) out of range    0  
+Warning: QImage::pixelColor: coordinate (526,655) out of range    0  
+Warning: QImage::pixelColor: coordinate (528,656) out of range    0  
+Warning: QImage::pixelColor: coordinate (530,657) out of range    0  
+Warning: QImage::pixelColor: coordinate (532,659) out of range    0  
+Warning: QImage::pixelColor: coordinate (533,659) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,660) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,660) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,661) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,661) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,662) out of range    0  
+Warning: QImage::pixelColor: coordinate (535,662) out of range    0  
+Warning: QImage::pixelColor: coordinate (534,662) out of range    0  
+Warning: QImage::pixelColor: coordinate (532,663) out of range    0  
+Warning: QImage::pixelColor: coordinate (531,664) out of range    0  
+Warning: QImage::pixelColor: coordinate (528,665) out of range    0  
+Warning: QImage::pixelColor: coordinate (525,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (524,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (523,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (523,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (522,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (522,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (523,666) out of range    0  
+Warning: QImage::pixelColor: coordinate (525,667) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (585,702) out of range    0  
+2024/01/18-12:14:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+Warning: QImage::pixelColor: coordinate (1341,632) out of range    0  
+Warning: QImage::pixelColor: coordinate (1339,630) out of range    0  
+Warning: QImage::pixelColor: coordinate (1334,625) out of range    0  
+Warning: QImage::pixelColor: coordinate (1328,621) out of range    0  
+Warning: QImage::pixelColor: coordinate (1327,620) out of range    0  
+Warning: QImage::pixelColor: coordinate (1326,619) out of range    0  
+Warning: QImage::pixelColor: coordinate (1326,619) out of range    0  
+Warning: QImage::pixelColor: coordinate (1326,618) out of range    0  
+Warning: QImage::pixelColor: coordinate (1325,616) out of range    0  
+Warning: QImage::pixelColor: coordinate (1324,616) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,615) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,615) out of range    0  
+Warning: QImage::pixelColor: coordinate (1323,615) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1321,626) out of range    0  
+Warning: QImage::pixelColor: coordinate (1309,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1298,639) out of range    0  
+Warning: QImage::pixelColor: coordinate (1061,679) out of range    0  
+Warning: QImage::pixelColor: coordinate (1046,679) out of range    0  
+Warning: QImage::pixelColor: coordinate (1048,676) out of range    0  
+Warning: QImage::pixelColor: coordinate (1049,676) out of range    0  
+Warning: QImage::pixelColor: coordinate (1049,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1049,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1051,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1060,674) out of range    0  
+Warning: QImage::pixelColor: coordinate (1063,673) out of range    0  
+Warning: QImage::pixelColor: coordinate (1064,673) out of range    0  
+Warning: QImage::pixelColor: coordinate (1063,674) out of range    0  
+Warning: QImage::pixelColor: coordinate (1063,674) out of range    0  
+Warning: QImage::pixelColor: coordinate (1063,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1062,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1062,675) out of range    0  
+Warning: QImage::pixelColor: coordinate (1062,675) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1081,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1066,651) out of range    0  
+Warning: QImage::pixelColor: coordinate (1057,655) out of range    0  
+Warning: QImage::pixelColor: coordinate (1040,659) out of range    0  
+Warning: QImage::pixelColor: coordinate (1020,667) out of range    0  
+Warning: QImage::pixelColor: coordinate (1010,668) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (999,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (999,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (998,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (997,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (997,669) out of range    0  
+Warning: QImage::pixelColor: coordinate (996,668) out of range    0  
+Warning: QImage::pixelColor: coordinate (992,664) out of range    0  
+Warning: QImage::pixelColor: coordinate (989,661) out of range    0  
+Warning: QImage::pixelColor: coordinate (981,657) out of range    0  
+Warning: QImage::pixelColor: coordinate (973,651) out of range    0  
+Warning: QImage::pixelColor: coordinate (968,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (963,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (963,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (962,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (961,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (959,643) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,643) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (958,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (957,642) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (955,654) out of range    0  
+Warning: QImage::pixelColor: coordinate (978,650) out of range    0  
+Warning: QImage::pixelColor: coordinate (999,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1043,637) out of range    0  
+Warning: QImage::pixelColor: coordinate (1077,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1088,631) out of range    0  
+Warning: QImage::pixelColor: coordinate (1096,632) out of range    0  
+Warning: QImage::pixelColor: coordinate (1095,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1092,637) out of range    0  
+Warning: QImage::pixelColor: coordinate (1087,640) out of range    0  
+Warning: QImage::pixelColor: coordinate (1084,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (1081,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1079,647) out of range    0  
+Warning: QImage::pixelColor: coordinate (1078,647) out of range    0  
+Warning: QImage::pixelColor: coordinate (1075,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1074,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1074,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1073,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1073,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1072,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1072,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1071,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1068,649) out of range    0  
+Warning: QImage::pixelColor: coordinate (1066,649) out of range    0  
+Warning: QImage::pixelColor: coordinate (1061,649) out of range    0  
+Warning: QImage::pixelColor: coordinate (1056,647) out of range    0  
+Warning: QImage::pixelColor: coordinate (1053,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1047,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1041,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1039,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1035,643) out of range    0  
+Warning: QImage::pixelColor: coordinate (1031,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1028,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1022,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1017,647) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,648) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,647) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1016,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (1017,642) out of range    0  
+Warning: QImage::pixelColor: coordinate (1017,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1017,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1018,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1019,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1019,641) out of range    0  
+Warning: QImage::pixelColor: coordinate (1019,641) out of range    0  
+Warning: QObject::killTimer: Timers cannot be stopped from another thread    0  
+Warning: QObject::startTimer: Timers cannot be started from another thread    0  
+Warning: QImage::pixelColor: coordinate (1018,624) out of range    0  
+Warning: QImage::pixelColor: coordinate (1013,627) out of range    0  
+Warning: QImage::pixelColor: coordinate (1007,628) out of range    0  
+Warning: QImage::pixelColor: coordinate (1004,631) out of range    0  
+Warning: QImage::pixelColor: coordinate (1003,631) out of range    0  
+Warning: QImage::pixelColor: coordinate (1003,631) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,631) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,632) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,633) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,634) out of range    0  
+Warning: QImage::pixelColor: coordinate (1000,637) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,639) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,640) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,643) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,643) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1001,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,644) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,645) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1002,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1005,646) out of range    0  
+Warning: QImage::pixelColor: coordinate (1059,654) out of range    0  
+2024/01/18-12:14:56:  bSelectAll
+2024/01/18-12:14:57:  bSelectAll
+2024/01/18-12:14:59:  bSelectAll
+2024/01/18-12:15:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/18-12:15:04:  bSelectAll
+2024/01/18-12:15:10:  bSelectAll
+2024/01/18-12:15:12:  bSelectAll
+2024/01/18-12:15:14:  bSelectAll
+2024/01/18-12:15:15:  bSelectAll
+2024/01/18-12:15:16:  bSelectAll
+2024/01/18-12:15:18:  bSelectAll
+2024/01/18-12:15:21:  bSelectAll
+2024/01/18-12:15:23:  bSelectAll
+2024/01/18-12:15:24:  bSelectAll
+2024/01/18-12:15:26:  bSelectAll
+2024/01/18-12:15:27:  bSelectAll
+2024/01/18-12:15:28:  bSelectAll
+2024/01/18-12:15:30:  bSelectAll
+2024/01/18-12:15:33:  bSelectAll
+2024/01/18-12:15:35:  bSelectAll
+2024/01/18-12:15:36:  bSelectAll
+2024/01/18-12:15:37:  bSelectAll
+2024/01/18-12:15:40:  bSelectAll
+2024/01/18-12:15:48:  bSelectAll
+2024/01/18-12:15:49:  bSelectAll
+2024/01/18-12:15:51:  bSelectAll
+2024/01/18-12:15:52:  bSelectAll
+2024/01/18-12:15:53:  bSelectAll
+2024/01/18-12:15:54:  bSelectAll
+2024/01/18-12:15:56:  bSelectAll
+2024/01/18-12:16:05:  bSelectAll
+2024/01/18-12:16:06:  bSelectAll
+2024/01/18-12:16:08:  bSelectAll
+2024/01/18-12:16:10:  bSelectAll
+2024/01/18-12:16:20:  bSelectAll
+2024/01/18-12:16:25:  bSelectAll
+2024/01/18-12:16:30:  bSelectAll
+2024/01/18-12:16:32:  bSelectAll
+2024/01/18-12:16:35:  bSelectAll
+2024/01/18-12:16:37:  bSelectAll
+2024/01/18-12:16:39:  bSelectAll
+2024/01/18-12:16:42:  bSelectAll
+2024/01/18-12:16:44:  bSelectAll
+2024/01/18-12:16:46:  bSelectAll
+2024/01/18-12:16:46:  bSelectAll
+2024/01/18-12:16:48:  bSelectAll
+2024/01/18-12:16:49:  bSelectAll
+2024/01/18-12:16:51:  bSelectAll
+2024/01/18-12:16:52:  bSelectAll
+2024/01/18-12:16:56:  bSelectAll
+2024/01/18-12:16:59:  bSelectAll
+2024/01/18-12:17:02:  bSelectAll
+2024/01/18-12:17:03:  bSelectAll
+2024/01/18-12:17:05:  bSelectAll
+2024/01/18-12:17:07:  bSelectAll
+2024/01/18-12:17:09:  bSelectAll
+2024/01/18-12:17:11:  bSelectAll
+2024/01/18-12:17:12:  bSelectAll
+2024/01/18-12:17:14:  bSelectAll
+2024/01/18-12:17:15:  bSelectAll
+2024/01/18-12:17:17:  bSelectAll
+2024/01/18-12:17:20:  bSelectAll
+2024/01/18-12:17:21:  bSelectAll
+2024/01/18-12:17:23:  bSelectAll
+2024/01/18-12:17:26:  bSelectAll
+2024/01/18-12:17:28:  bSelectAll
+2024/01/18-12:17:29:  bSelectAll
+2024/01/18-12:17:33:  bSelectAll
+2024/01/18-12:17:35:  bSelectAll
+2024/01/18-12:17:36:  bSelectAll
+2024/01/18-12:17:37:  bSelectAll
+2024/01/18-12:17:39:  bSelectAll
+2024/01/18-12:17:40:  bSelectAll
+2024/01/18-12:17:42:  bSelectAll
+2024/01/18-12:17:43:  bSelectAll
+2024/01/18-12:17:44:  bSelectAll
+2024/01/18-12:17:46:  bSelectAll
+2024/01/18-12:17:47:  bSelectAll
+2024/01/18-12:17:48:  bSelectAll
+2024/01/18-12:17:50:  bSelectAll
+2024/01/18-12:17:51:  bSelectAll
+2024/01/18-12:18:19:  bSelectAll
+2024/01/18-12:18:21:  bSelectAll
+2024/01/18-12:18:22:  bSelectAll
+2024/01/18-12:18:23:  bSelectAll
+2024/01/18-12:18:24:  bSelectAll
+2024/01/18-12:18:26:  bSelectAll
+2024/01/18-12:18:28:  bSelectAll
+2024/01/18-12:18:29:  bSelectAll
+2024/01/18-12:18:31:  bSelectAll
+2024/01/18-12:18:32:  bSelectAll
+2024/01/18-12:18:34:  bSelectAll
+2024/01/18-12:18:36:  bSelectAll
+2024/01/18-12:18:43:  bSelectAll
+2024/01/18-12:18:46:  bSelectAll
+2024/01/18-12:18:53:  bSelectAll
+2024/01/18-12:18:58:  bSelectAll
+2024/01/18-12:19:06:  bSelectAll
+2024/01/18-12:19:09:  bSelectAll
+2024/01/18-12:19:49:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/18-12:19:49:  defaultSuffix: "ctb"
+2024/01/18-12:19:49:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/18-12:19:49:  defaultSuffix: "ctb"
+2024/01/18-12:20:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/18-12:20:14:  save File name  "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/ctb"
+2024/01/18-12:20:18:  suffix: "CHITUBOX slicer(*.ctb)" ""
+2024/01/18-12:20:18:  defaultSuffix: "ctb"
+2024/01/18-12:20:18:  suffix: "CHITUBOX slicer(*.ctb)" ""
+2024/01/18-12:20:18:  defaultSuffix: "ctb"
+2024/01/18-12:20:26:  save File name  "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/V2_MGC4GanxV2Meilong.ctb"
+2024/01/18-12:20:26:  ==slicer version "V1.9.5.0"
+2024/01/18-12:20:30:  save head offset  45535
+Warning: QFile::remove: Empty or null file name    0  
+2024/01/18-12:21:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/19-18:26:41:  fileBtn
+2024/01/19-18:26:45:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/19-18:26:45:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Gan X V2/UnFuck.stl"
+2024/01/19-18:26:51:  fileBtn
+2024/01/19-18:26:57:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/19-18:26:57:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V3_0_CORNER_INSERT_MGC4.stl"
+2024/01/19-18:27:00:  fileBtn
+2024/01/19-18:27:05:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/19-18:27:05:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V1_0_CORE_SHELL_ B_MGC4.stl"
+2024/01/19-18:27:05:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGC 4/V1_0_CORE_SHELL_ A_MGC4.stl"
+2024/01/19-19:22:19:  bSelectAll
+2024/01/19-19:22:25:  bSelectAll
+2024/01/19-19:22:31:  bSelectAll
+2024/01/19-19:45:29:  fileBtn
+2024/01/19-19:45:49:  selectedNameFilter "Files (*.stl *.obj *.cbddlp *.chitubox *.ctb)"
+2024/01/19-19:45:49:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Meilong 7x7 V2/V4_0_CORNER_INSERT_M7V2.stl"
+2024/01/19-19:45:49:  ready to load: "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/Meilong 7x7 V2/V3_0_CORE_INSERT_M7V2.stl"
+2024/01/19-19:46:06:  bSelectAll
+2024/01/19-19:46:16:  bSelectAll
+2024/01/19-19:46:18:  bSelectAll
+2024/01/19-19:46:19:  bSelectAll
+2024/01/19-19:46:21:  bSelectAll
+2024/01/19-19:47:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/19-19:49:42:  boreBtn
+2024/01/19-19:50:01:  boreBtn
+2024/01/19-19:50:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/19-19:50:09:  boreBtn
+2024/01/19-19:50:35:  bSelectAll
+2024/01/19-19:50:35:  bSelectAll
+2024/01/19-19:50:37:  bSelectAll
+2024/01/19-19:50:41:  bSelectAll
+2024/01/19-19:50:42:  bSelectAll
+2024/01/19-19:50:44:  bSelectAll
+2024/01/19-19:50:45:  bSelectAll
+2024/01/19-19:50:48:  bSelectAll
+2024/01/19-19:50:49:  bSelectAll
+2024/01/19-19:50:50:  bSelectAll
+2024/01/19-19:50:52:  bSelectAll
+2024/01/19-19:50:53:  bSelectAll
+2024/01/19-19:50:55:  bSelectAll
+2024/01/19-19:50:56:  bSelectAll
+2024/01/19-19:50:58:  bSelectAll
+2024/01/19-19:51:01:  bSelectAll
+2024/01/19-19:51:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/19-19:51:03:  bSelectAll
+2024/01/19-19:51:07:  bSelectAll
+2024/01/19-19:51:11:  bSelectAll
+2024/01/19-19:51:12:  bSelectAll
+2024/01/19-19:51:14:  bSelectAll
+2024/01/19-19:51:15:  bSelectAll
+2024/01/19-19:51:17:  bSelectAll
+2024/01/19-19:51:19:  bSelectAll
+2024/01/19-19:51:21:  bSelectAll
+2024/01/19-19:51:23:  bSelectAll
+2024/01/19-19:51:25:  bSelectAll
+2024/01/19-19:51:27:  bSelectAll
+2024/01/19-19:51:30:  bSelectAll
+2024/01/19-19:51:31:  bSelectAll
+2024/01/19-19:51:35:  bSelectAll
+2024/01/19-19:51:37:  bSelectAll
+2024/01/19-19:51:39:  bSelectAll
+2024/01/19-19:51:41:  bSelectAll
+2024/01/19-19:51:42:  bSelectAll
+2024/01/19-19:51:44:  bSelectAll
+2024/01/19-19:51:45:  bSelectAll
+2024/01/19-19:51:47:  bSelectAll
+2024/01/19-19:51:49:  bSelectAll
+2024/01/19-19:51:52:  bSelectAll
+2024/01/19-19:51:54:  bSelectAll
+2024/01/19-19:51:57:  bSelectAll
+2024/01/19-19:51:59:  bSelectAll
+2024/01/19-19:52:02:  bSelectAll
+2024/01/19-19:52:03:  bSelectAll
+2024/01/19-19:52:05:  bSelectAll
+2024/01/19-19:52:07:  bSelectAll
+2024/01/19-19:52:10:  bSelectAll
+2024/01/19-19:52:14:  bSelectAll
+2024/01/19-19:52:19:  bSelectAll
+2024/01/19-19:52:25:  bSelectAll
+2024/01/19-19:52:27:  bSelectAll
+2024/01/19-19:52:28:  bSelectAll
+2024/01/19-19:52:30:  bSelectAll
+2024/01/19-19:52:31:  bSelectAll
+2024/01/19-19:52:35:  bSelectAll
+2024/01/19-19:52:36:  bSelectAll
+2024/01/19-19:52:38:  bSelectAll
+2024/01/19-19:52:39:  bSelectAll
+2024/01/19-19:52:40:  bSelectAll
+2024/01/19-19:52:41:  bSelectAll
+2024/01/19-19:52:43:  bSelectAll
+2024/01/19-19:52:45:  bSelectAll
+2024/01/19-19:52:48:  bSelectAll
+2024/01/19-19:52:50:  bSelectAll
+2024/01/19-19:52:51:  bSelectAll
+2024/01/19-19:52:53:  bSelectAll
+2024/01/19-19:52:57:  bSelectAll
+2024/01/19-19:52:59:  bSelectAll
+2024/01/19-19:53:02:  bSelectAll
+2024/01/19-19:53:03:  bSelectAll
+2024/01/19-19:53:05:  bSelectAll
+2024/01/19-19:53:09:  bSelectAll
+2024/01/19-19:53:58:  bSelectAll
+2024/01/19-19:54:01:  bSelectAll
+2024/01/19-19:54:03:  bSelectAll
+2024/01/19-19:54:05:  bSelectAll
+2024/01/19-19:54:06:  bSelectAll
+2024/01/19-19:54:08:  bSelectAll
+2024/01/19-19:54:10:  bSelectAll
+2024/01/19-19:54:11:  bSelectAll
+2024/01/19-19:54:12:  bSelectAll
+2024/01/19-19:54:14:  bSelectAll
+2024/01/19-19:54:15:  bSelectAll
+2024/01/19-19:54:17:  bSelectAll
+2024/01/19-19:54:19:  bSelectAll
+2024/01/19-19:54:20:  bSelectAll
+2024/01/19-19:54:24:  bSelectAll
+2024/01/19-19:54:34:  bSelectAll
+2024/01/19-19:54:36:  bSelectAll
+2024/01/19-19:54:38:  bSelectAll
+2024/01/19-19:54:40:  bSelectAll
+2024/01/19-19:54:42:  bSelectAll
+2024/01/19-19:54:44:  bSelectAll
+2024/01/19-19:54:46:  bSelectAll
+2024/01/19-19:54:48:  bSelectAll
+2024/01/19-19:54:50:  bSelectAll
+2024/01/19-19:54:52:  bSelectAll
+2024/01/19-19:54:58:  bSelectAll
+2024/01/19-19:55:06:  bSelectAll
+2024/01/19-19:55:07:  bSelectAll
+2024/01/19-19:55:09:  bSelectAll
+2024/01/19-19:55:13:  bSelectAll
+2024/01/19-19:55:14:  bSelectAll
+2024/01/19-19:55:18:  bSelectAll
+2024/01/19-19:55:20:  bSelectAll
+2024/01/19-19:55:21:  bSelectAll
+2024/01/19-19:55:23:  bSelectAll
+2024/01/19-19:55:26:  bSelectAll
+2024/01/19-19:55:27:  bSelectAll
+2024/01/19-19:55:29:  bSelectAll
+2024/01/19-19:55:32:  bSelectAll
+2024/01/19-19:55:42:  bSelectAll
+2024/01/19-19:55:45:  bSelectAll
+2024/01/19-19:55:50:  bSelectAll
+2024/01/19-19:55:53:  bSelectAll
+2024/01/19-19:55:59:  bSelectAll
+2024/01/19-19:56:00:  bSelectAll
+2024/01/19-19:56:02:  bSelectAll
+2024/01/19-19:56:07:  bSelectAll
+2024/01/19-19:56:09:  bSelectAll
+2024/01/19-19:56:10:  bSelectAll
+2024/01/19-19:56:21:  bSelectAll
+2024/01/19-19:56:27:  bSelectAll
+2024/01/19-19:56:31:  bSelectAll
+2024/01/19-19:56:35:  bSelectAll
+2024/01/19-19:56:39:  bSelectAll
+2024/01/19-19:56:42:  bSelectAll
+2024/01/19-19:56:44:  bSelectAll
+2024/01/19-19:56:47:  bSelectAll
+2024/01/19-19:57:22:  bSelectAll
+2024/01/19-19:57:23:  bSelectAll
+2024/01/19-19:57:25:  bSelectAll
+2024/01/19-19:57:26:  bSelectAll
+2024/01/19-19:57:27:  bSelectAll
+2024/01/19-19:57:29:  bSelectAll
+2024/01/19-19:57:30:  bSelectAll
+2024/01/19-19:57:31:  bSelectAll
+2024/01/19-19:57:32:  bSelectAll
+2024/01/19-19:57:34:  bSelectAll
+2024/01/19-19:57:35:  bSelectAll
+2024/01/19-19:57:36:  bSelectAll
+2024/01/19-19:57:37:  bSelectAll
+2024/01/19-19:59:02:  save to file: "/home/zww/.config/ChiTuBox/global.cfg"
+2024/01/19-20:00:04:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/19-20:00:04:  defaultSuffix: "ctb"
+2024/01/19-20:00:04:  suffix: "CHITUBOX slicer(*.ctb)" "ctb"
+2024/01/19-20:00:04:  defaultSuffix: "ctb"
+2024/01/19-20:00:21:  save File name  "/home/zww/Documents/3dPrinting/MSLA/Cubing/CoreMagenetConversions/MGCUnFuckMeilong.ctb"
+2024/01/19-20:00:21:  ==slicer version "V1.9.5.0"
+2024/01/19-20:00:26:  save head offset  57105
