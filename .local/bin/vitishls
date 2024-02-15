@@ -1,0 +1,2 @@
+#!/bin/sh
+sh /opt/Xilinx/Vitis_HLS/2022.1/bin/vitis_hls

@@ -1,0 +1,21 @@
+#!/usr/bin/zsh
+
+#the first argument is the language, further arguments are for the language specific template scripts.
+
+ERROR="Language Not Supported."
+ERROR1="Incorrect syntax, template LANG ARG1 ARG2 ARG3."
+
+if [ $1 = "verilog" ]; then
+	vtemplates $2
+elif [ $1 = "cpp" ]; then
+	cpptemplates $2 $3
+elif [ $1 = "python" ]; then
+	echo $ERROR
+elif [ $1 = "c" ]; then
+	echo $ERROR
+elif [ $1 = "rust" ]; then
+	echo $ERROR
+else
+	#Echo an error
+	echo $ERROR1
+fi

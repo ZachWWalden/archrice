@@ -1,0 +1,20 @@
+#!/usr/bin/zsh
+
+ERROR="Please use main or class as the first argument."
+
+if [ $1 = "main" ]; then
+	#Move main template into cwd
+	cp /home/zww/Documents/Programming/Templates/CPP/main.cpp $PWD/
+elif [ $1 = "class" ]; then
+	#move class files into directory called from and rename them to class name found in $2
+	cp /home/zww/Documents/Programming/Templates/CPP/class_name.cpp $PWD/$2.cpp &
+	cp /home/zww/Documents/Programming/Templates/CPP/class_name.hpp $PWD/$2.hpp &
+	\sed -i -e "s/CHANGE/$2/g" $2.cpp &
+	\sed -i -e "s/CHANGE/$2/g" $2.hpp &
+elif [ $1 = "header" ]; then
+	cp /home/zww/Documents/Programming/Templates/CPP/class_name.hpp $PWD/$2.hpp &
+	\sed -i -e "s/CHANGE/$2/g" $2.hpp &
+else
+	#Echo an error
+	echo $ERROR
+fi

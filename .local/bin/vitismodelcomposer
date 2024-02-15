@@ -1,0 +1,2 @@
+#!/bin/sh
+sh /opt/Xilinx/Model_Composer/2022.1/bin/model_composer

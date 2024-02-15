@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+#mount bluray drive, for this machine /dev/sr0
+#
+sudo mount /dev/sr0 /media/bluray
+
+lol="0"
+if [ $1 = "test" ]; then
+	mpv bluray://$lol --bluray-device="//media/bluray"
+else
+    mpv bluray://$1 --bluray-device="//media/bluray"
+fi

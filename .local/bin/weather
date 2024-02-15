@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ $1 = "bville" ]; then
+	#set radar location to KINX
+	loc="Bartlesville"
+elif [ $1 = "okc" ]; then
+	#set radar location to KTLX
+	loc="Edmond"
+elif [ $1 = "ww" ]; then
+	#set radar location to KVNX
+	loc="Woodward_Ok"
+fi
+
+curl -sf "wttr.in/$loc"

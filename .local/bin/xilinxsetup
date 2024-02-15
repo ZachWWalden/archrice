@@ -1,0 +1,2 @@
+#!/bin/sh
+sh /opt/Xilinx/.xinstall/Vitis_2022.1/xsetup

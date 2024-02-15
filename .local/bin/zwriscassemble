@@ -1,0 +1,491 @@
+#!/usr/bin/env python3
+
+import sys
+
+class Assembler():
+
+    #Bitwose And Constants
+    REG_LOW = 0x00001F00
+    REG_HIGH = 0x0003E000
+    MEM_PTR_ADDR = 0x000C0000
+    POST_INC = 0x00400000
+    IMMEADIATE = 0xFF000000
+    ADDRESS = 0xFFFC0000
+    MAKE_32 = 0xFFFFFFFF
+
+    #Default Instruction Words.
+    instructions = [    ("nop", 0x00000000),
+                        ("inc", 0x012C00BC),
+                        ("dec", 0xFF2C00BC),
+                        ("com", 0x013400BC),
+                        ("inv", 0x003400BC),
+                        ("addi",0x002C00BC),
+                        ("add", 0x00240080),
+                        ("sub", 0x00200080),
+                        ("subi",0x002800BC),
+                        ("cp",  0x00000080),
+                        ("cpi", 0x000800BC),
+                        ("mul", 0x0020008E),
+                        ("muli",0x0028009E),
+                        ("and", 0x00240097),
+                        ("andi",0x002C009B),
+                        ("or",  0x00200097),
+                        ("ori", 0x0028009B),
+                        ("shr", 0x002400A5),
+                        ("shl", 0x002000A5),
+                        ("ld",  0x003000FB),
+                        ("ldfb",0x002000FB),
+                        ("pop", 0x003000FB),
+                        ("ldi", 0x002800F8),
+                        ("lpm", 0x002000F9),
+                        ("str", 0x001000C6),
+                        ("stfb",0x000000C6),
+                        ("push",0x001000C6),
+                        ("movr",0x0020009C),
+                        ("mov", 0x00000000),
+                        ("in",  0x0028009C),
+                        ("out", 0x0024009C),
+                        ("jmp",0x00000438),
+                        ("brcs",0x00000538),
+                        ("brcc",0x00000138),
+                        ("breq",0x00000638),
+                        ("brne",0x00000238),
+                        ("brng",0x00000738),
+                        ("brps",0x00000338),
+                        ("call",0x00000042),
+                        ("ret", 0x00000043),
+                        ("reti",0x00100043),
+                        ("hlt", 0x0000001F)]
+
+    #Keywords
+    gprs = [("r0", 0x00), ("r1", 0x01), ("r2", 0x02), ("r3", 0x03), ("r4", 0x04), ("r5", 0x05), ("r6", 0x06), ("r7", 0x07), ("r8", 0x08), ("r9", 0x09),("r10", 0x0A), ("r11", 0x0B), ("r12", 0x0C), ("r13", 0x0D), ("r14", 0x0E), ("r15", 0x0F), ("r16", 0x10), ("r17", 0x11), ("r18", 0x12), ("r19", 0x13), ("r20", 0x14), ("r21", 0x15), ("r22", 0x16), ("r23", 0x17), ("r24", 0x18), ("r25", 0x19), ("r26", 0x1A), ("r27", 0x1B), ("r28", 0x1C), ("r29", 0x1D), ("r30", 0x1E), ("r31", 0x1F)]
+    sfrs = [("sph", 0x01), ("spl", 0x00), ("xh", 0x03), ("xl", 0x02), ("yh", 0x5), ("yl", 0x04), ("zh", 0x07), ("zl", 0x06), ("t1cr", 0x08), ("csp", 0x09), ("led", 0x0A), ("iccr", 0x0B), ("gicr", 0x0C), ("tcb0", 0x0D), ("tcb1", 0x0E), ("tcb2", 0x0F), ("tcb3", 0x10), ("tcb4", 0x11), ("tcb5", 0x12), ("tcb6", 0x13), ("tcb7", 0x14), ("pbout", 0x15), ("paout", 0x16), ("pain", 0x17), ("tb0", 0x18), ("tb1", 0x19), ("tb2", 0x1A), ("tb3", 0x1B), ("tb4", 0x1C), ("tb5", 0x1D), ("tb6", 0x1E), ("tb7", 0x1F)]
+    ptrOptions = [("x", 0x01, 0x0), ("x+", 0x01, 0x1), ("y", 0x02, 0x0), ("y+", 0x02, 0x1), ("z", 0x03, 0x0), ("z+", 0x03, 0x1)]
+    directives = [(".org", 0x1), (".inc", 0x1), (".equ", 0x1), (".dw", 0x1)]
+
+
+    def __init__(self, asmLines, binaryFile):
+        self.asmLines = asmLines
+        self.binaryFile = binaryFile
+        self.labels = []
+        self.address = 0x0
+
+    def loop(self):
+        self.address = 0x0
+        for line in self.asmLines:
+            #Is line a comment?
+            test = line.strip()
+            if(len(test) != 0 and test[0] == ';'):
+                pass
+            #is line a label?
+            elif(line[0] == ':'):
+                #give label a memory address
+                splitStr = line.split(':')
+                splitStr = splitStr[1].split(';')
+                splitStr = splitStr[0].split(' ')
+                self.labels.append((splitStr[0], self.address))
+            elif(line == '\n'):
+                pass
+            else:
+                inst = test.split(' ')
+                if inst[0] == "MOV":
+                    self.address += 0x2
+                else:
+                    self.address += 0x1
+        print(self.labels)
+        #Loop through to assemble
+        self.address = 0x0
+        #Re Loop through the lines to assemble the instructions.
+        self.count = 1
+        for line in self.asmLines:
+            tmp = line.strip().split(' ')[0].lower()
+            cont = True
+            #is line a comment or blank?
+            test = line.strip()
+            if((len(test) != 0 and test[0] == ';') or line[0] == '\n'):
+                cont = False
+            #Is line an assembler directive?
+            inList, item = self.isInList(tmp, self.directives)
+            if(inList and cont):
+                cont = False
+                if item[0] == ".org":
+                    self.address = int(line.split(' ')[1], 16)
+                elif item[0] == ".inc":
+                    pass
+                elif item[0] == ".equ":
+                    pass
+                elif item[0] == ".dw":
+                    pass
+            #Is line a Label?
+            if(cont and tmp[0] == ':'):
+                cont = False
+            #Line Must be an instruction
+            inList, item = self.isInList(tmp, self.instructions)
+            if(inList and cont):
+                cont = False
+                self.writeInstruction(item, line.split(' '), self.binaryFile)
+            self.count += 1
+
+    def writeInstruction(self, item, line, binaryFile):
+        instructionWord = 0x0
+        #Instruction Switch
+        if item[0] == "nop":
+            #All zeros, already done
+            instructionWord = item[1]
+        elif item[0] == "inc":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "dec":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "add":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "addi":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "sub":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "subi":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            immeadiate &= 0x0FF
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "cp":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "cpi":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "mul":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            assert regOperand2 != regOperand1, ("You cannot load both halves of a frambebuffer value into the same register")
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "muli":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            assert regOperand2 != regOperand1, ("You cannot load both halves of a frambebuffer value into the same register")
+            immeadiate = int(line[3], 16)
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "and":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "andi":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "or":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "ori":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "shr":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "shl":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "com":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "inv":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)
+        elif item[0] == "ld":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            inList, item = self.isInList(line[2].lower(), self.ptrOptions)
+            assert inList, (line[2] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "ldfb":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            assert regOperand2 != regOperand1, ("You cannot load both halves of a frambebuffer value into the same register")
+            inList, item = self.isInList(line[3].lower(), self.ptrOptions)
+            assert inList, (line[3] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH) | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "ldi":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            immeadiate = int(line[2], 16)
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (immeadiate << 24 & self.IMMEADIATE)
+        elif item[0] == "str":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            inList, item = self.isInList(line[1].lower(), self.ptrOptions)
+            assert inList, (line[1] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (regOperand << 13 & self.REG_HIGH) | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "stfb":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[3].lower(), self.gprs)
+            assert inList, (line[3] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            inList, item = self.isInList(line[1].lower(), self.ptrOptions)
+            assert inList, (line[1] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH) | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "mov":
+            #This instruction will overwrite R0
+            inList, item = self.isInList("ld", self.instructions)
+            instructionWord = item[1]
+            inList, item = self.isInList(line[2].lower(), self.ptrOptions)
+            assert inList, (line[2] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+            #Write The First instruction
+            self.writeInstructionWord(instructionWord & self.MAKE_32)
+            #Prepare the Store
+            inList, item = self.isInList(line[1].lower(), self.ptrOptions)
+            assert inList, (line[1] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            inList, item = self.isInList("str", self.instructions)
+            instructionWord = item[1]
+            instructionWord = instructionWord | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "movr":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "in":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.sfrs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "out":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.sfrs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand1 = regOperand[1]
+            inList, regOperand = self.isInList(line[2].lower(), self.gprs)
+            assert inList, (line[2] + " is not a valid register, Line: " + str(self.count))
+            regOperand2 = regOperand[1]
+            instructionWord = instructionWord | (regOperand1 << 8 & self.REG_LOW) | (regOperand2 << 13 & self.REG_HIGH)
+        elif item[0] == "jmp":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "brcs":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "brcc":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "breq":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "brne":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "brng":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "brps":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "call":
+            instructionWord = item[1]
+            inList, item = self.isInList(line[1], self.labels)
+            assert inList, (line[1] + " Is not a valid label, Line: " + str(self.count))
+            address = item[1]
+            instructionWord = instructionWord | (address << 18 & self.ADDRESS)
+        elif item[0] == "ret":
+            instructionWord = item[1]
+        elif item[0] == "reti":
+            instructionWord = item[1]
+        elif item[0] == "push":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW)| (regOperand << 13 & self.REG_HIGH)
+        elif item[0] == "pop":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (regOperand << 13 & self.REG_HIGH)
+        elif item[0] == "lpm":
+            instructionWord = item[1]
+            inList, regOperand = self.isInList(line[1].lower(), self.gprs)
+            assert inList, (line[1] + " is not a valid register, Line: " + str(self.count))
+            regOperand = regOperand[1]
+            inList, item = self.isInList(line[2].lower(), self.ptrOptions)
+            assert inList, (line[2] + " Is not a valid pointer option, Line: " + str(self.count))
+            ptrAddr = item[1]
+            postInc = item[2]
+            instructionWord = instructionWord | (regOperand << 8 & self.REG_LOW) | (ptrAddr << 18 & self.MEM_PTR_ADDR) | (postInc << 22 & self.POST_INC)
+        elif item[0] == "hlt":
+            #Nothing Needs to be done
+            instructionWord = item[1]
+        else:
+            print("Not an Instruction")
+        #write the instruction
+        self.writeInstructionWord(instructionWord & self.MAKE_32)
+
+
+
+    def writeInstructionWord(self, instructionWord):
+        #seek to the location in the file
+        self.binaryFile.seek(self.address, 0)
+        self.binaryFile.write(instructionWord.to_bytes(32, byteorder='little', signed=False))
+        self.address += 0x4
+
+    def isInList(self, key, list):
+        key = key.strip()
+        for item in list:
+            tmp = item[0].strip()
+            if key == tmp:
+                return (True, item)
+        return (None, None)
+
+def main():
+    if (len(sys.argv) != 2):
+        print("Please provide the proper .asm file for compilation")
+
+    asmFile = sys.argv[1]
+    binaryFile = open(asmFile + ".bin", "wb")
+    for i in range(16384):
+        binaryFile.write((0x00000000).to_bytes(32, byteorder='little', signed=False))
+
+    asmFile = open(asmFile, "r")
+
+    asmLines = asmFile.readlines()
+    asmFile.close()
+
+    assembler = Assembler(asmLines, binaryFile)
+    assembler.loop()
+
+    binaryFile.close()
+
+if __name__ == "__main__":
+    main()
