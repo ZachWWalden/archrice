@@ -1,10 +1,5 @@
 #!/usr/bin/zsh
 
-cp /home/zww/Documents/Verilog/Templates/Makefile $PWD/
-cp /home/zww/Documents/Verilog/Templates/module_name.v $PWD/$1.v
-cp /home/zww/Documents/Verilog/Templates/module_name_tb.py $PWD/$1_tb.py
-
-
-sed -i -e "s/<++>/$1/g" Makefile
-sed -i -e "s/<++>/$1/g" $1.v
-sed -i -e "s/<++>/$1/g" $1_tb.py
+cat $TEMPLATE_HOME/Verilog/Makefile | sed -e "s/<++>/$1/g" > $PWD/
+cat $TEMPLATE_HOME/Verilog/module_name.v | sed -e "s/<++>/$1/g" > $PWD/$1.v
+cat $TEMPLATE_HOME/Verilog/module_name_tb.py | sed -e "s/<++>/$1/g" > $PWD/$1_tb.py

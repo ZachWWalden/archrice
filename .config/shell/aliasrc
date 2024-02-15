@@ -43,6 +43,7 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
+	giturl="git remote add origin" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
 	sdn="shutdown -h now" \
