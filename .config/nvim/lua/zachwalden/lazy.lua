@@ -14,7 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("lazy").setup({
-	-- {"nvim-treesitter/playground"} DEPRECATED, features built into neovim
+	{
+		import = "zachwalden.lazy"
+	},
 	{
 		"github/copilot.vim",
 	},
@@ -35,6 +37,5 @@ require("lazy").setup({
 	--use("airblade/vimrooter")
 
 	-- use("vimwiki/vimwiki")
-}, {
-	root = root .. "/plugins",
-})
+}
+)
