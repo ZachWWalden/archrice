@@ -36,7 +36,7 @@ return {
 				'cssls', -- CSS
 				'dockerls', -- Docker
 				'docker_compose_language_service', -- Docker Compose
-				'golang_lint_ls', -- Go
+				'golangci_lint_ls', -- Go
 				'gradle_ls', -- Gradle
 				'html', -- HTML
 				'jsonls', -- JSON
@@ -146,7 +146,7 @@ return {
 		lspconfig.docker_compose_language_service.setup {
 			capabilities = capabilities,
 		}
-		lspconfig.golang_lint_ls.setup {
+		lspconfig.golangci_lint_ls.setup {
 			capabilities = capabilities,
 		}
 		lspconfig.gradle_ls.setup {
