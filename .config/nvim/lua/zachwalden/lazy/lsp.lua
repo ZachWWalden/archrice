@@ -40,7 +40,7 @@ return {
 				'gradle_ls', -- Gradle
 				'html', -- HTML
 				'jsonls', -- JSON
-				'java_language_server', -- Java
+				-- 'java_language_server', -- Java, ERROR Cannot compile on Arch linux due to missing jlink binary
 				'tsserver', -- TypeScript, JavaScript
 				-- 'kotlin_language_server', -- Kotlin
 				'ltex', -- LaTeX
@@ -158,9 +158,9 @@ return {
 		lspconfig.jsonls.setup {
 			capabilities = capabilities,
 		}
-		lspconfig.java_language_server.setup {
-			capabilities = capabilities,
-		}
+		-- lspconfig.java_language_server.setup {
+		-- 	capabilities = capabilities,
+		-- }
 		lspconfig.tsserver.setup {
 			capabilities = capabilities,
 		}
