@@ -1,4 +1,5 @@
 return	{
+{
 	"folke/zen-mode.nvim",
 	opts = {
 		-- your configuration comes here
@@ -34,4 +35,8 @@ return	{
 			vim.opt.colorcolumn = "0"
 		end)
 	end
+},
+{
+	"folke/twilight.nvim",
+},
 }
