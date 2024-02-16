@@ -38,7 +38,6 @@ return {
 				'docker_compose_language_service', -- Docker Compose
 				'golang_lint_ls', -- Go
 				'gradle_ls', -- Gradle
-				'hdl_checker', --
 				'html', -- HTML
 				'jsonls', -- JSON
 				'java_language_server', -- Java
@@ -151,10 +150,6 @@ return {
 			capabilities = capabilities,
 		}
 		lspconfig.gradle_ls.setup {
-			capabilities = capabilities,
-		}
-		lspconfig.hdl_checker.setup {
-			filetypes = { "vhdl" },
 			capabilities = capabilities,
 		}
 		lspconfig.html.setup {
