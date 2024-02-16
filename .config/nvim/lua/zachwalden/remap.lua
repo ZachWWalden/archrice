@@ -1,12 +1,16 @@
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Binds to move a line highlighted in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
+
+-- Move through the page nicely
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -33,10 +37,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
-vim.keymap.set("n", "<leader><leader>", function()
+-- Bind to source the current buffer
+vim.keymap.set("n", "<leader>src", function()
     vim.cmd("so")
 end)
 
@@ -67,13 +69,10 @@ vim.keymap.set("n","<leader><leader>","/<++><CR>4xi",{noremap = true})
 vim.api.nvim_command([[map <leader>c :w! \| !compiler "<c-r>%"<CR>]])
 
 -- Open a terminal in a split
-vim.keymap.set("","<leader>tt", [[:split \| :terminal<CR>]])
+vim.keymap.set("","<leader>tt", [[<cmd>split \| terminal<CR>]])
 
 --Open corresponding .pdf/.html or preview
-vim.keymap.set("n","<leader>p",":!opout <c-r>%<CR><CR>")
+vim.keymap.set("n","<leader>p","<cmd>!opout <c-r>%<CR><CR>")
 -- vim.api.nvim_command([[map <leader>pp :!opout <c-r>%<CR><CR>]])
-
--- Open a terminal in a split
-vim.keymap.set("","<leader>tt", [[:split \| :terminal<CR>]])
 
 vim.keymap.set("c","w!!","execute 'silent! write !sudo tee % >/dev/null' <bar> edit!",{noremap = true})
