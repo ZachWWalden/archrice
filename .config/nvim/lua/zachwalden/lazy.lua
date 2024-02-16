@@ -36,4 +36,7 @@ require("lazy").setup({
 
 	-- use("vimwiki/vimwiki")
 })
+require("lazy").setup(plugins, {
+	root = "/lazy",
+})
 
