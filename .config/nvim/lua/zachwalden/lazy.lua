@@ -35,8 +35,6 @@ require("lazy").setup({
 	--use("airblade/vimrooter")
 
 	-- use("vimwiki/vimwiki")
+}, {
+	root = root .. "/plugins",
 })
-require("lazy").setup(plugins, {
-	root = "/lazy",
-})
-
