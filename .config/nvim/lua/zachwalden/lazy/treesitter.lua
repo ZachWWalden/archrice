@@ -14,7 +14,7 @@ return	{
 				},
 				indent = { enable = true },
 			})
-			vim.keymap.set('n', '<leader>vast', "<cmd>InspectTree")
+			vim.keymap.set('n', '<leader>vast', "<cmd>InspectTree<CR>")
 		end
 	},
 	{
