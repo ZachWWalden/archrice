@@ -49,7 +49,7 @@ return {
 				'marksman', -- Markdown
 				'matlab_ls', -- MatLab
 				'swift_mesonls', -- Meson build
-				'nil_ls', -- Nix
+				-- 'nil_ls', -- Nix: Build Fails
 				'openscad_lsp', -- OpenSCAD
 				'pyright', -- Python
 				'rust_analyzer', -- Rust
@@ -219,9 +219,9 @@ return {
 		lspconfig.swift_mesonls.setup {
 			capabilities = capabilities,
 		}
-		lspconfig.nil_ls.setup {
-			capabilities = capabilities,
-		}
+		-- lspconfig.nil_ls.setup {
+		-- 	capabilities = capabilities,
+		-- }
 		lspconfig.openscad_lsp.setup {
 			capabilities = capabilities,
 		}
