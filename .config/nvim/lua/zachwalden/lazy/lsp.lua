@@ -13,6 +13,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		-- LSP Extras
 		"p00f/clangd_extensions.nvim",
+		"onsails/lspkind.nvim",
 	},
 	config = function ()
 		-- Setup mason
@@ -61,7 +62,33 @@ return {
 		-- setup Completion
 		local cmp = require'cmp'
 
+		local ok, lspkind = pcall(require, "lspkind")
+		if not ok then
+			return
+		end
+
+		lspkind.init {
+			symbol_map = {
+				Copilot = "",
+			},
+		}
+
 		cmp.setup({
+			formatting = {
+				-- Youtube: How to set up nice formatting for your sources.
+				format = lspkind.cmp_format {
+					with_text = true,
+					menu = {
+						buffer = "[buf]",
+						nvim_lsp = "[LSP]",
+						nvim_lua = "[api]",
+						path = "[path]",
+						cmdline = "[cmd]",
+						luasnip = "[snip]",
+					},
+				},
+			},
+
 			snippet = {
 				-- REQUIRED - you must specify a snippet engine
 				expand = function(args)
@@ -81,6 +108,7 @@ return {
 			sources = cmp.config.sources({
 				{ name = 'path' },
 				{ name = 'nvim_lsp' },
+				{ name = 'nvim-lua' },
 				{ name = 'luasnip' }, -- For luasnip users.
 			}, {
 				{ name = 'buffer' },
