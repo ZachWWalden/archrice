@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
-require("lazy").setup("plugins")
+require("lazy").setup("zachwalden.plugins")
 
 require("lazy").setup({
 	{
