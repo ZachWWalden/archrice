@@ -69,7 +69,9 @@ vim.keymap.set("n","<leader><leader>","/<++><CR>4xi",{noremap = true})
 vim.api.nvim_command([[map <leader>c :w! \| !compiler "<c-r>%"<CR>]])
 
 -- Open a terminal in a split
-vim.keymap.set("","<leader>tt", [[<cmd>split \| terminal<CR>]])
+vim.keymap.set("","<leader>tt", function ()
+	vim.cmd('split | term')
+end)
 
 --Open corresponding .pdf/.html or preview
 vim.keymap.set("n","<leader>p","<cmd>!opout <c-r>%<CR><CR>")
