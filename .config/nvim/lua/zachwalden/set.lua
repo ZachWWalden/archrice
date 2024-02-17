@@ -31,7 +31,7 @@ vim.opt.go = "a"
 vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.showmode = false
 vim.opt.ruler = false
-vim.opt.laststatus = 0
+vim.opt.laststatus = 2
 vim.opt.showcmd = false
 
 vim.opt.compatible = false
