@@ -107,12 +107,12 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = 'path' },
-				{ name = 'nvim_lsp' },
-				{ name = 'nvim-lua' },
-				{ name = 'luasnip' }, -- For luasnip users.
+				{ name = 'nvim-lua', keyword_length = 1 },
+				{ name = 'nvim_lsp', keyword_length = 1 },
+				{ name = 'luasnip', keyword_length = 2 }, -- For luasnip users.
 			}, {
-				{ name = 'buffer' },
-				{ name = 'cmdline' },
+				{ name = 'buffer', keyword_length = 3 },
+				{ name = 'cmdline', keyword_length = 3 },
 			})
 		})
 
