@@ -29,9 +29,6 @@ require("lazy").setup({
 		"ap/vim-css-color",
 	},
 	{
-		"ryanoasis/vim-devicons",
-	},
-	{
 		"Yggdroot/indentLine",
 	},
 	--use("airblade/vimrooter")
