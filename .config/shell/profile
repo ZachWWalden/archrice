@@ -17,6 +17,8 @@ export TERMINAL_PROG="st"
 export BROWSER="brave"
 export BROWSER2="librewolf"
 
+export LOCAITION="Bartlesville"
+
 # Change the default crypto/weather monitor sites.
 # export CRYPTOURL="rate.sx"
 # export WTTRURL="wttr.in"

@@ -15,9 +15,9 @@ elif [ $1 = "usa-l" ]; then
 elif [ $1 = "ww" ]; then
 	#set radar location to KVNX
 	loc="KVNX"
-elif [ $1 = "ia" ]; then
+elif [ $1 = "cc" ]; then
 	#set radar location to KDVN
-	loc="KDVN"
+	loc="KCRP"
 else
 	#not an option
 	echo "Passed argument not an option. Try again"
@@ -27,5 +27,5 @@ fi
 
 gifpath="/home/zww/Downloads/doppler.gif"
 
-curl https://radar.weather.gov/ridge/standard/${loc}_loop.gif -o $gifpath
+curl https://radar.weather.gov/ridge/standard/${loc}_loop.gif -o $gifpath >> /dev/null
 mpv --no-osc --loop=inf $gifpath
