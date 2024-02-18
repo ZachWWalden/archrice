@@ -2,6 +2,7 @@
 
 yes | \cp -rf .config ~/
 yes | \cp -rf .local ~/
+yes | \cp -rf .template ~/
 yes | \cp -rf .xprofile ~/
 yes | \cp -rf .zprofile ~/
 yes | \cp -rf .gtkrc-2.0 ~/
