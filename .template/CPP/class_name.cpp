@@ -1,5 +1,5 @@
 /*==================================================================================
- *Class -
+ *Class - CHANGE
  *Author - Zach Walden
  *Created -
  *Last Changed -
@@ -33,7 +33,12 @@
 
 #include "CHANGE.hpp"
 
-
+CHANGE::CHANGE()
+{
+}
+CHNAGE::~CHANGE()
+{
+}
 
 
 
