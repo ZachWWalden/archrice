@@ -5,10 +5,12 @@
 ERROR="Language Not Supported."
 ERROR1="Incorrect syntax, template LANG ARG1 ARG2 ARG3."
 
+PROJECT=$(git rev-parse --show-toplevel | awk '{n=split($1,A,"/"); print A[n]}')
+
 if [ $1 = "verilog" ]; then
-	vtemplates $2 $3 $4
+	vtemplates $2 $3 $PROJECT
 elif [ $1 = "cpp" ]; then
-	cpptemplates $2 $3 $4 $5
+	cpptemplates $2 $3 $4 $PROJECT
 elif [ $1 = "python" ]; then
 	echo $ERROR
 elif [ $1 = "c" ]; then
