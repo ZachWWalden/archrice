@@ -13,7 +13,7 @@
 CHANGE::CHANGE()
 {
 }
-CHNAGE::~CHANGE()
+CHANGE::~CHANGE()
 {
 }
 
