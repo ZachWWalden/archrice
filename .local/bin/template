@@ -6,9 +6,9 @@ ERROR="Language Not Supported."
 ERROR1="Incorrect syntax, template LANG ARG1 ARG2 ARG3."
 
 if [ $1 = "verilog" ]; then
-	vtemplates $2
+	vtemplates $2 $3 $4
 elif [ $1 = "cpp" ]; then
-	cpptemplates $2 $3
+	cpptemplates $2 $3 $4 $5
 elif [ $1 = "python" ]; then
 	echo $ERROR
 elif [ $1 = "c" ]; then

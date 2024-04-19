@@ -2,17 +2,19 @@
 
 ERROR="Please use main or class as the first argument."
 
+# $1 is template class, $2 is File Name except when main is chosen, $3 is license, $4 is project name
+
 if [ $1 = "main" ]; then
 	#Move main template into cwd
-	cp "$TEMPLATE_HOME/CPP/main.cpp" $PWD/
+	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/main.cpp" | sed -e "s/PROJECT_NAME/$4/g" > $PWD/main.cpp
 elif [ $1 = "class" ]; then
 	#move class files into directory called from and rename them to class name found in $2
 	echo $2
-	cat "$TEMPLATE_HOME/CPP/class_name.cpp" | sed -e "s/CHANGE/$2/g" > $PWD/$2.cpp
-	cat "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" > $PWD/$2.hpp
+	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.cpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" > $PWD/$2.cpp
+	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" > $PWD/$2.hpp
 elif [ $1 = "header" ]; then
 	echo $2
-	cat "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" > $PWD/$2.hpp
+	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" > $PWD/$2.hpp
 else
 	#Echo an error
 	echo $ERROR
