@@ -2,6 +2,8 @@
 
 #$1 is module name, $2 is License, $3 is project name.
 
+MDYDATE=$(date '+%D')
+
 cat "$TEMPLATE_HOME/License/$2" "$TEMPLATE_HOME/Verilog/Makefile" | sed -e "s/<++>/$1/g" | sed -e "s/PROJECT_NAME/$3/g" > $PWD/
-cat "$TEMPLATE_HOME/License/$2" "$TEMPLATE_HOME/Verilog/module_name.v" | sed -e "s/<++>/$1/g" | sed -e "s/PROJECT_NAME/$3/g" > $PWD/$1.v
-cat "$TEMPLATE_HOME/License/$2" "$TEMPLATE_HOME/Verilog/module_name_tb.py" | sed -e "s/<++>/$1/g" | sed -e "s/PROJECT_NAME/$3/g" > $PWD/$1_tb.py
+cat "$TEMPLATE_HOME/License/$2" "$TEMPLATE_HOME/Verilog/module_name.v" | sed -e "s/<++>/$1/g" | sed -e "s/PROJECT_NAME/$3/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$1.v
+cat "$TEMPLATE_HOME/License/$2" "$TEMPLATE_HOME/Verilog/module_name_tb.py" | sed -e "s/<++>/$1/g" | sed -e "s/PROJECT_NAME/$3/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$1_tb.py
