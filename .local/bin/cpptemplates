@@ -13,7 +13,7 @@ elif [ $1 = "class" ]; then
 	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.cpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$2.cpp
 	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$2.hpp
 elif [ $1 = "header" ]; then
-	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/class_name.hpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$2.hpp
+	cat "$TEMPLATE_HOME/License/$3" "$TEMPLATE_HOME/CPP/header.hpp" | sed -e "s/CHANGE/$2/g" | sed -e "s/PROJECT_NAME/$4/g" | sed -e "s|DATE|$MDYDATE|g" > $PWD/$2.hpp
 else
 	#Echo an error
 	echo $ERROR

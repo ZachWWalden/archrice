@@ -27,7 +27,6 @@ vim.opt.updatetime = 50
 
 vim.opt.mouse = "a"
 vim.opt.bg = "dark"
-vim.opt.go = "a"
 vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.showmode = false
 vim.opt.ruler = false
