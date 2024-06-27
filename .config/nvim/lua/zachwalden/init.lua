@@ -1,7 +1,8 @@
 require("zachwalden.lazy")
 require("zachwalden.set")
 require("zachwalden.remap")
-require("zachwalden.colors")
+
+vim.cmd[[colorscheme  dracula]]
 
 local augroup = vim.api.nvim_create_augroup
 local ZachWaldenGroup = augroup('ZachWalden', {})
