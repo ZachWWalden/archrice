@@ -1,8 +1,14 @@
 #!/usr/bin/sh
 
-yes | \cp -rf ~/.config/ .
+yes | \cp -rf ~/.config/nvim .config
+yes | \cp -rf ~/.config/shell .config
+yes | \cp -rf ~/.config/zsh/ .config
+yes | \cp -rf ~/.config/x11 .config
+yes | \cp -rf ~/.config/OrcaSlicer/ .config
 yes | \cp -rf ~/.local/bin .local
 yes | \cp -rf ~/.template/ .
 yes | \cp -rf ~/.zprofile .
+yes | \cp -rf ~/.XCompose .
+yes | \cp -rf ~/.xprofile .
 yes | \cp -rf ~/.gtkrc-2 .
 
