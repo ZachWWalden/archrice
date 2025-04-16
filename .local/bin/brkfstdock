@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+xrandr --output DP1 --off &&
+xrandr --output DP2 --off &&
+xrandr --output DP2-1 --off &&
+xrandr --output DP2-2 --mode "1920x1080" --rate 60 &&
+xrandr --output DP2-3 --mode "1920x1080" --rate 60 --right-of DP2-2 &&
+xrandr --output eDP1 --mode "1920x1080" --rate 60 --below DP2-3
