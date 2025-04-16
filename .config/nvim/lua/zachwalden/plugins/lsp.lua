@@ -49,7 +49,7 @@ return {
 				'autotools_ls', -- Make, Autoconf
 				'marksman', -- Markdown
 				'matlab_ls', -- MatLab
-				'swift_mesonls', -- Meson build
+				'mesonlsp', -- Meson build
 				-- 'nil_ls', -- Nix: Build Fails
 				'openscad_lsp', -- OpenSCAD
 				'pyright', -- Python
@@ -217,7 +217,7 @@ return {
 		lspconfig.matlab_ls.setup {
 			capabilities = capabilities,
 		}
-		lspconfig.swift_mesonls.setup {
+		lspconfig.mesonlsp.setup {
 			capabilities = capabilities,
 		}
 		-- lspconfig.nil_ls.setup {
