@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+trackptid=$(xinput | grep TrackPoint | cut -d'=' -f2 | cut -f1)
+
+xinput set-prop "$trackptid" "libinput Accel Profile Enabled" 0 1 0
