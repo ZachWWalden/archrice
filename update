@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 yes | \cp -rf ~/.config/ .
-yes | \cp -rf ~/.local/ .
+yes | \cp -rf ~/.local/bin .local
 yes | \cp -rf ~/.template/ .
 yes | \cp -rf ~/.zprofile .
 yes | \cp -rf ~/.gtkrc-2 .
