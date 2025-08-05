@@ -44,7 +44,7 @@ autocmd({"BufRead","BufNewFile"}, {
 autocmd({"VimLeave"},{
 	group = ZachWaldenGroup,
 	pattern = "*.tex",
-	command = "!texclear %",
+	command = "!latexmk -c %",
 })
 
 vim.g.netrw_browse_split = 0
