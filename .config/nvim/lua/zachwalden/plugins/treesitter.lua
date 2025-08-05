@@ -35,6 +35,7 @@ return	{
 					'javascript',
 					'json',
 					'kotlin',
+					'latex',
 					'make',
 					'markdown',
 					'matlab',
