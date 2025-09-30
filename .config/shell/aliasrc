@@ -43,6 +43,7 @@ alias \
 alias \
 	ka="killall" \
 	g="git" \
+	gs="git status" \
 	giturl="git remote add origin" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
@@ -62,7 +63,10 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	pkget="pokeget random" \
+	z="zathura" \
+	df="df -h" \
+	du="du -sh"
 
 alias \
 	lf="lfub" \
@@ -70,7 +74,7 @@ alias \
 	ref='shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutenvrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc' \
 	weath="less -S ${XDG_CACHE_HOME:-$HOME/.cache}/weatherreport" \
 	ports="sudo lsof -i -P -n | grep LISTEN" \
-	handbrake="ghb"
+	hbrake="ghb"
 
 up () {
 	local d=""
