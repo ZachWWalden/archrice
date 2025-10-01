@@ -50,6 +50,8 @@ alias \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
 	sdn="shutdown -h now" \
+	e="$EDITOR" \
+	v="$EDITOR" \
 	ps="p -Ss" \
 	prfz="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns" \
 	p="pacman" \
