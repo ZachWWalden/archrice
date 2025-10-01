@@ -45,7 +45,7 @@ alias \
 	g="git" \
 	gs="git status" \
 	gc="git commit -m" \
-	ga="git add" \
+	gad="git add" \
 	giturl="git remote add origin" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \
