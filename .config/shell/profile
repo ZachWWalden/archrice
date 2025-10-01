@@ -17,6 +17,9 @@ export BROWSER2="librewolf"
 
 export LOCAITION="Bartlesville"
 
+#GTK Theme
+export GTK_THEME=Dracula
+
 # Change the default crypto/weather monitor sites.
 # export CRYPTOURL="rate.sx"
 # export WTTRURL="wttr.in"
